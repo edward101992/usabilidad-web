@@ -46,7 +46,7 @@ class UsuarioSeeder extends Seeder
         	'usuario_genero'=>'Femenino',
         	'usuario_estado'=>true
         ]);
-              Usuario::create([
+             Usuario::create([
         	'usuario_password'=>bcrypt('123'),
         	'usuario_nombre'=>'Arturo',
         	'usuario_apellido'=>'Giron',
@@ -57,8 +57,6 @@ class UsuarioSeeder extends Seeder
         	'usuario_genero'=>'Masculino',
         	'usuario_estado'=>false
         ]);
-              
-
 
     }
 }

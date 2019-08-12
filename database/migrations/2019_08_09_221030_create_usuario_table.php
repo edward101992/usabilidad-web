@@ -26,7 +26,7 @@ class CreateUsuarioTable extends Migration
             $table->string('usuario_telefono');
             $table->string('usuario_email')->unique();
             $table->string('usuario_imagen')->default("public/imagenes/userDefault.png");
-            $table->string('usuario_genero');
+            $table->enum('usuario_genero',['Femenino','Masculino']);
             $table->boolean('usuario_estado')->default(false);
             $table->rememberToken();
             $table->timestamps();

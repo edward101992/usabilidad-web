@@ -10,6 +10,6 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-    'failed' => 'El Usuario no se encuentra activo en Usabilidad-Web',
+    'failed' => 'Informacion Incorrecta',
     'throttle' => 'Demasiados intentos de inicio de sesión. Vuelva a intentarlo en :seconds segundos.',
 ];

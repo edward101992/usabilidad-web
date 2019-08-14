@@ -49,6 +49,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <link rel="shortcut icon" href="favicon.ico" /> </head>
     <!-- END HEAD -->
 
+
     <body class=" login">
         <!-- BEGIN : LOGIN PAGE 5-1 -->
         <div class="user-login-5">
@@ -72,11 +73,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="col-xs-6">
                                 <input class="form-control form-control-solid placeholder-no-fix form-group" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email" required autocomplete="email" autofocus>
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
+
                             </div>
                         </div>
 
@@ -85,20 +82,10 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="col-xs-6">
                                 <input class="form-control form-control-solid placeholder-no-fix form-group" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Contraseña" required autocomplete="current-password" >
 
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
                             </div>
                         </div>
 
-                        <br>    
-                        <br>
-                        <br>    
-                        <br>
-                        <br>    
-                        <br>
+                      
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div class="rem-password">
@@ -121,60 +108,68 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                  </div>
                                     <div class="forgot-password">
-                                         <h3>
+                                         <h5>
                                         <a href="javascript:;" id="forget-password" class="forget-password">¿Olvido su Contraseña?</a>
-                                        </h3>
+                                        </h5>
                                     </div>
                                    
                         
                                 </div>
                             </div>
                         </form>
-                        
+                        <br>
+
 
                         <!-- BEGIN FORGOT PASSWORD FORM -->
                         <div class="panel-body">
-                              @if (session('status'))
-                                <div class="alert alert-success">
-                                    {{ session('status') }}
-                                </div>
-                             @endif
-                        <form class="forget-form" action="javascript:; {{ route('password.email') }}" method="POST">
-                           {{ csrf_field() }}
-                           <input type="hidden" name="token" value="{{ $token }}">
-
+                        <form class="forget-form" action="{{ route('password.email') }}" method="POST">
+                            {{ csrf_field() }}
                             <h3 class="font-green">Recuperar Contraseña</h3>
-                            <p> Digite su correo para recuperar su contraseña </p>
-
-                            <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
+                            <p> Digite su correo para recuperar su contraseña.</p>
+                            <div class="form-group">
                                 <input class="form-control placeholder-no-fix form-group" type="email" autocomplete="off" placeholder="Email" name="email" /> 
-                                      @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
+                                    @if ($errors->has('email'))
+                                    <div class="alert alert alert-warning alert-dismissable">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                                    <strong>{{ $errors->first('email') }}</strong> Usabilidad-Web. 
+                                </div>
+                                   @endif
                             </div>
-                    
                             <div class="btn-group btn-group-lg btn-group-solid margin-bottom-10 form-actions">
                                 <button type="button" id="back-btn" class="btn green btn-outline btn-lg">Atras</button>
                                 <button type="submit" class="btn green-meadow uppercase pull-right btn-lg">Enviar</button>
                             </div>
                         </form>
+
+                    <div class="panel-body">
+                            @if (session('status'))
+                                <div class="alert alert-success alert-dismissable">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                                    <strong>Enviado</strong> Revise su correo electronico. 
+                                </div>
+                            @endif
                     </div>
+                    <div class="panel-body">
+                                @if ($errors->has('email'))
+                                    <div class="alert alert alert-danger alert-dismissable">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                                    <strong>{{ $errors->first('email') }}</strong> Usabilidad-Web email. 
+                                </div>
+                                @endif
+                    </div>
+                    <div class="panel-body">
+                        
+                                @if ($errors->has('password'))
+                                <div class="alert alert alert-danger alert-dismissable">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                                    <strong>{{ $errors->first('password') }}</strong> Usabilidad-Web password. 
+                                @endif
+                    </div>
+
                         <!-- END FORGOT PASSWORD FORM -->
 
-
-
                     </div>
-                   <div class="login-footer">
-                        <div class="row bs-reset">
-                            <div class="col-xs-7 bs-reset">
-                                <div class="login-copyright text-right">
-                                    <p>Universidad de Cundinamarca - Facatativa 2019</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  
                 </div>
             </div>
         </div>

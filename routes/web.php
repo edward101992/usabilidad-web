@@ -16,7 +16,13 @@ Route::get('/', function () {
 });
 
 
+/**
+ * Ruta de ejemplo de SweetController
+ * 
+ */
 
+//Route::get('tipo/{type}', 'SweetController@notification');
+///////////////////////////////////////////////////////
 Route::get('/home', 'HomeController@index')->name('home');
 
 

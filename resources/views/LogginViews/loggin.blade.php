@@ -49,7 +49,6 @@ License: You must have a valid license purchased only from themeforest(the above
         <link rel="shortcut icon" href="favicon.ico" /> </head>
     <!-- END HEAD -->
 
-
     <body class=" login">
         <!-- BEGIN : LOGIN PAGE 5-1 -->
         <div class="user-login-5">
@@ -62,117 +61,118 @@ License: You must have a valid license purchased only from themeforest(the above
                 </div>
                 <div class="col-md-6 login-container bs-reset mt-login-5-bsfix">
                     <div class="login-content">
+
                         <img class="login-logo" src="../assets/pages/img/login/logolinea.png" />
                         <h1>Universidad Cundinamarca - Facatativa</h1>
                         <p> Plataforma diseñada para medir la Usabilidad de aplicaciones web en la Universidad Cundinamarca. </p>
-                        <form action="{{ route('login') }}" class="login-form" method="POST">
-                            {{ csrf_field() }}
+                            <form action="{{ route('login') }}" class="login-form" method="POST">
+                                         {{ csrf_field() }}
+                             
 
-                             <div>
-
-                            <div class="col-xs-6">
-                                <input class="form-control form-control-solid placeholder-no-fix form-group" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email" required autocomplete="email" autofocus>
-
-
-                            </div>
-                        </div>
-
-                        <div>
-
-                            <div class="col-xs-6">
-                                <input class="form-control form-control-solid placeholder-no-fix form-group" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Contraseña" required autocomplete="current-password" >
-
-                            </div>
-                        </div>
-
-                      
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="rem-password">
-                                        <label class="rememberme mt-checkbox mt-checkbox-outline">
-                                            
-                                                <input type="checkbox" name="remember" value="1" /> Recordarme
-                                            
-                                            <span></span>
-                                        </label>
-                                    </div>
+                             @if (session('status'))
+                                <div class="alert alert-success alert-quitar">
+                                    <strong>Usabilidad-Web</strong>
+                                    Correo Enviado!
                                 </div>
-                                <div class="col-sm-8 text-right">
+                            @endif
 
-                                <div class="btn-group btn-group-lg btn-group-solid margin-bottom-10">
-                                     <button class="btn red btn-lg" type="submit">
-                                        <i class="fa fa-user"></i>
-                                        Ingresar
-                                    </button>
-                                     <button type="button" class="btn green btn-outline btn-lg">Registrarse</button>
-
-                                 </div>
-                                    <div class="forgot-password">
-                                         <h5>
-                                        <a href="javascript:;" id="forget-password" class="forget-password">¿Olvido su Contraseña?</a>
-                                        </h5>
+                             @if ($errors->has('email'))
+                                    <div class="alert alert-danger alert-quitar">
+                                        <strong>Usabilidad-Web</strong>
+                                        Informacion Incorrecta!
                                     </div>
-                                   
+                            @endif
+                             @if ($errors->has('password'))
+                                   <div class="alert alert-danger alert-quitar">
+                                        <strong>Usabilidad-Web</strong>
+                                        Informacion Incorrecta!
+                                    </div>
+                            @endif
+
+
+                                    <div class="row">
+                                         <div class="col-xs-6">
+                                                <input class="form-control form-control-solid placeholder-no-fix form-group" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email" required autocomplete="email" autofocus>    
+                                            </div>    
+
+                                            <div class="col-xs-6">
+                                                <input class="form-control form-control-solid placeholder-no-fix form-group" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Contraseña" required autocomplete="current-password" >
+                                            </div>
+                                    </div>
+                                          
+                                        <br>    
+                                        
+                                      
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="rem-password">
+                                                    <label class="rememberme mt-checkbox mt-checkbox-outline">
+                                                        
+                                                            <input type="checkbox" name="remember" value="1" /> Recordarme
+                                                        
+                                                        <span></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8 text-right">
+
+                                            <div class="btn-group btn-group-lg btn-group-solid margin-bottom-10">
+                                                 <button class="btn red btn-lg" type="submit">
+                                                    <i class="fa fa-user"></i>
+                                                    Ingresar
+                                                </button>
+                                                 <button type="button" class="btn green btn-outline btn-lg">Registrarse</button>
+
+                                             </div>
+                                                <div class="forgot-password">
+                                                     <h3>
+                                                    <a href="javascript:;" id="forget-password" class="forget-password">¿Olvido su Contraseña?</a>
+                                                    </h3>
+                                                </div>
+                                            <br>
+
+                                            </div>
+                                        </div>
+                                     </form>
                         
-                                </div>
-                            </div>
-                        </form>
-                        <br>
-
 
                         <!-- BEGIN FORGOT PASSWORD FORM -->
-                        <div class="panel-body">
                         <form class="forget-form" action="{{ route('password.email') }}" method="POST">
                             {{ csrf_field() }}
                             <h3 class="font-green">Recuperar Contraseña</h3>
-                            <p> Digite su correo para recuperar su contraseña.</p>
+                            <p> Digite su correo para recuperar su contraseña, si se encuentra registrado se le enviara un mensaje a su correo </p>
                             <div class="form-group">
                                 <input class="form-control placeholder-no-fix form-group" type="email" autocomplete="off" placeholder="Email" name="email" /> 
-                                    @if ($errors->has('email'))
-                                    <div class="alert alert alert-warning alert-dismissable">
-                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-                                    <strong>{{ $errors->first('email') }}</strong> Usabilidad-Web. 
-                                </div>
-                                   @endif
+                                   
                             </div>
                             <div class="btn-group btn-group-lg btn-group-solid margin-bottom-10 form-actions">
                                 <button type="button" id="back-btn" class="btn green btn-outline btn-lg">Atras</button>
                                 <button type="submit" class="btn green-meadow uppercase pull-right btn-lg">Enviar</button>
                             </div>
                         </form>
+                        <br>
+                        <br>
+                        <br>
 
-                    <div class="panel-body">
-                            @if (session('status'))
-                                <div class="alert alert-success alert-dismissable">
-                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-                                    <strong>Enviado</strong> Revise su correo electronico. 
-                                </div>
-                            @endif
-                    </div>
-                    <div class="panel-body">
-                                @if ($errors->has('email'))
-                                    <div class="alert alert alert-danger alert-dismissable">
-                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-                                    <strong>{{ $errors->first('email') }}</strong> Usabilidad-Web email. 
-                                </div>
-                                @endif
-                    </div>
-                    <div class="panel-body">
-                        
-                                @if ($errors->has('password'))
-                                <div class="alert alert alert-danger alert-dismissable">
-                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-                                    <strong>{{ $errors->first('password') }}</strong> Usabilidad-Web password. 
-                                @endif
-                    </div>
-
-                        <!-- END FORGOT PASSWORD FORM -->
-
-                    </div>
                   
+                        <!-- END FORGOT PASSWORD FORM -->
+    
                 </div>
+
+                   <div class="login-footer">
+                        <div class="row bs-reset">
+                            <div class="col-xs-7 bs-reset">
+                                <div class="login-copyright text-right">
+                                    <p>Copyright &copy; Universidad Cundinamarca - Facatativa</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
             </div>
         </div>
+    </div>
         <!-- END : LOGIN PAGE 5-1 -->
         <!--[if lt IE 9]>
 <script src="../assets/global/plugins/respond.min.js"></script>

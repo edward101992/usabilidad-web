@@ -18,5 +18,8 @@
         "lodash": "^4.17.4",
         "sweetalert": "^2.0.8",
         "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "toastr": "^2.1.4"
     }
 }

@@ -125,9 +125,9 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                              </div>
                                                 <div class="forgot-password">
-                                                     <h3>
+                                                     <h5>
                                                     <a href="javascript:;" id="forget-password" class="forget-password">¿Olvido su Contraseña?</a>
-                                                    </h3>
+                                                    </h5>
                                                 </div>
                                             <br>
 
@@ -163,7 +163,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="row bs-reset">
                             <div class="col-xs-7 bs-reset">
                                 <div class="login-copyright text-right">
-                                    <p>Copyright &copy; Universidad Cundinamarca - Facatativa</p>
+                                    <p>Copyright &copy; Universidad Cundinamarca - 2019</p>
                                 </div>
                             </div>
                         </div>

@@ -39,6 +39,8 @@ class LoginController extends Controller
     }
 
 
+    ////Verificar Estado del Usuario
+
      protected function credentials(Request $request)
     {
        $request['usuario_estado'] = 1;

@@ -323,11 +323,11 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                     </div>
                     <!-- END THEME PANEL -->
-                    <h1 class="page-title"> Bienvenido Administrador
+                    <h1 class="page-title"> Bienvenido Evaluador
                     </h1>
                     <!-- END PAGE HEADER-->
                     <div class="note note-info">
-                        <p> Pagina de Inicio del Adinistrador </p>
+                        <p> Pagina de Inicio del Evaluador </p>
                     </div>
                 </div>
                 <!-- END CONTENT BODY -->

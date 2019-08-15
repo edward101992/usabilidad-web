@@ -327,7 +327,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     </h1>
                     <!-- END PAGE HEADER-->
                     <div class="note note-info">
-                        <p> Pagina de Inicio del Adinistrador </p>
+                        <p> Pagina de Inicio del Administrador </p>
                     </div>
                 </div>
                 <!-- END CONTENT BODY -->

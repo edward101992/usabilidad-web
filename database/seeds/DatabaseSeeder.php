@@ -11,7 +11,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        /**
+         * truncateTables para eliminar solo la informacion sin necesidad de
+         * borrar tambien las tablas
+         */
+        
+        $this-> truncateTables([
+                'users'
+        ]);
+
+     // $this->call(UsersTableSeeder::class);
         $this->call(RolesSeeder::class);        
         $this->call(PermisosSeeder::class);
         $this->call(UsuarioSeeder::class);

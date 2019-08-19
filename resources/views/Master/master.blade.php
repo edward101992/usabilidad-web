@@ -24,7 +24,7 @@ License: You must have a valid license purchased only from themeforest(the above
          <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <!-- END HEAD -->
-
+ 
     <body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-md">
         <!-- BEGIN HEADER -->
         <div class="page-header navbar navbar-fixed-top">
@@ -237,17 +237,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- BEGIN CONTAINER -->
         <div class="page-container">
             <!-- BEGIN SIDEBAR -->
-             @if(Entrust::hasRole('evaluador'))
-                   @include('EvaluadorViews.sidebarEvaluador') 
-             @endif 
-              @if(Entrust::hasRole('administrador'))
-                   @include('AdministradorViews.sidebarAdministrador') 
-             @endif
-              @if(Entrust::hasRole('estudiante'))
-                   @include('EstudianteViews.sidebarEstudiante') 
-             @endif
-            
-
+            @include('PlantillaViews.sidebar')
             <!-- END SIDEBAR -->
             <!-- BEGIN CONTENT -->
             <div class="page-content-wrapper">

@@ -54,6 +54,21 @@ class PermisosSeeder extends Seeder
          ]);
          $admin->attachPermission($permiso);  
 
+    // Permiso Inicio Ver Usuarios
+         $permiso = Permission::create([
+            'name'=>'ver-usuario',
+            'display_name'=>'Usuarios',
+            'description'=>'Permiso de ver usuarios'
+         ]);
+         $admin->attachPermission($permiso);
+
+    //Permiso ver Plataformas
+         $permiso = Permission::create([
+            'name'=>'ver-plataforma',
+            'display_name'=>'Plataformas',
+            'description'=>'Permiso de ver plataformas'
+         ]);
+         $admin->attachPermission($permiso);  
 
     }
 }

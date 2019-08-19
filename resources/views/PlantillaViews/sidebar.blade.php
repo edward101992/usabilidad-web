@@ -1,5 +1,4 @@
-                  
-  <!-- BEGIN SIDEBAR -->
+      <!-- BEGIN SIDEBAR -->
             <div class="page-sidebar-wrapper">
                 <!-- END SIDEBAR -->
                 <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
@@ -14,32 +13,59 @@
                     <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
                     <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
                         <li class="nav-item start ">
-                            <a href="javascript:;" class="nav-link nav-toggle">
+                            @if(Entrust::hasRole('administrador'))
+                                <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="icon-home"></i>
-                                <span class="title">Dashboard</span>
+                                <span class="title">Administrador</span>
                                 <span class="arrow"></span>
                             </a>
-                   <ul class="sub-menu">
-                                <li class="nav-item start ">
+                           @endif 
+                            @if(Entrust::hasRole('estudiante'))
+                                <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-home"></i>
+                                <span class="title">Estudiante</span>
+                                <span class="arrow"></span>
+                            </a>
+                           @endif
+                            @if(Entrust::hasRole('evaluador'))
+                                <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-home"></i>
+                                <span class="title">Evaluador</span>
+                                <span class="arrow"></span>
+                            </a>
+                           @endif
+                            
+                    <ul class="sub-menu">
+                            @if(Entrust::hasRole('administrador'))
+                                <li class="nav-item">
                                     <a href="index.html" class="nav-link ">
                                         <i class="icon-bar-chart"></i>
-                                        <span class="title">Dashboard 1</span>
+                                        <span class="title">Plataformas</span>
                                     </a>
                                 </li>
-                                <li class="nav-item start ">
-                                    <a href="dashboard_2.html" class="nav-link ">
-                                        <i class="icon-bulb"></i>
-                                        <span class="title">Dashboard 2</span>
-                                        <span class="badge badge-success">1</span>
+                                <li class="nav-item  ">
+                                    <a href="page_user_profile_2.html" class="nav-link ">
+                                        <i class="icon-users"></i>
+                                        <span class="title">Usuarios</span>
                                     </a>
                                 </li>
-                                <li class="nav-item start ">
-                                    <a href="dashboard_3.html" class="nav-link ">
-                                        <i class="icon-graph"></i>
-                                        <span class="title">Dashboard 3</span>
-                                        <span class="badge badge-danger">5</span>
+                            @endif  
+                            @if(Entrust::hasRole('evaluador'))
+                                <li class="nav-item">
+                                    <a href="index.html" class="nav-link ">
+                                        <i class="icon-bar-chart"></i>
+                                        <span class="title">Plataforma</span>
                                     </a>
                                 </li>
+                            @endif 
+                              @if(Entrust::hasRole('estudiante'))
+                                <li class="nav-item">
+                                    <a href="index.html" class="nav-link ">
+                                        <i class="icon-bar-chart"></i>
+                                        <span class="title">Plataforma</span>
+                                    </a>
+                                </li>
+                            @endif 
                             </ul>
                         </li>
                         <li class="nav-item  ">

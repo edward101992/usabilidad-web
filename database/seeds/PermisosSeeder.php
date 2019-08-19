@@ -19,7 +19,7 @@ class PermisosSeeder extends Seeder
  		$estudiante = Role::where('name', 'Estudiante')->first();
  		
 
-
+   // Permiso de bienvenido evaluador
        $permiso = Permission::create([
         	'name'=>'bienvenido-evaluador',
         	'display_name'=>'mensaje',
@@ -28,6 +28,7 @@ class PermisosSeeder extends Seeder
       		 $evaluador->attachPermission($permiso); 
 
 
+    // Permiso de bienvenido administrador
         $permiso = Permission::create([
         	'name'=>'bienvenido-administrador',
         	'display_name'=>'mensaje',
@@ -36,12 +37,24 @@ class PermisosSeeder extends Seeder
        		$admin->attachPermission($permiso); 
 
 
+    // Permiso de bienvenido estudiante
         $permiso = Permission::create([
         	'name'=>'bienvenido-estudiante',
         	'display_name'=>'mensaje',
         	'description'=>'mensaje de bienvenida estudiante'
         ]);
        		$estudiante->attachPermission($permiso); 
+
+
+    // Permiso de crear usuarios
+         $permiso = Permission::create([
+            'name'=>'crear-usuario',
+            'display_name'=>'Crear Usuarios',
+            'description'=>'Permiso de crear usuarios'
+         ]);
+         $admin->attachPermission($permiso);  
+
+
     }
 }
 

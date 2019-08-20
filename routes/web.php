@@ -12,20 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('LogginViews.loggin');
 });
 
 
-/**
- * Ruta de ejemplo de SweetController
- * 
- */
-
-//Route::get('tipo/{type}', 'SweetController@notification');
-///////////////////////////////////////////////////////
 Route::get('/home', 'HomeController@index')->name('home');
-
-
+Route::get('/ListaUsuarios','UserController@listaUsuario')->name('usuario.lista');
+Route::get('/Inicio', 'InicioController@inicio');
 
 /**
  * Rutas del Loggin de Laravel: vendor/laravel/framework/src/Illuminate/Routing/Router.php

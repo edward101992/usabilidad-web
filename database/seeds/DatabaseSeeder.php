@@ -16,9 +16,8 @@ class DatabaseSeeder extends Seeder
          * borrar tambien las tablas
          */
         
-        $this-> truncateTables([
-                'users'
-        ]);
+
+
 
      // $this->call(UsersTableSeeder::class);
         $this->call(RolesSeeder::class);        

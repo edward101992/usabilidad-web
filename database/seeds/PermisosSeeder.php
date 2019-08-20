@@ -163,6 +163,14 @@ class PermisosSeeder extends Seeder
         ]);
         $admin->attachPermission($permiso);
 
+        //Permiso Modificar Bienvenido
+        $permiso = Permission::create([
+            'name' => 'modificar-bienvenido',
+            'display_name' => 'Modificar Bienvenido',
+            'description' => 'permiso de modificar bienvenido'
+        ]);
+        $admin->attachPermission($permiso);
+
          /**
          *************************************************************************
          *********PERMISOS DE EVALUADOR*******************************************

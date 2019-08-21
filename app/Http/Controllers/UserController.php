@@ -10,9 +10,12 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function listaUsuario(){
+    	$nombre=
     	$roles=Role::all();
     	$roleusers=RoleUser::all();
     	$users=User::all();
     	return view('Usuario.listaUsuario', compact('roles','roleusers','users'));
     }
+
+    
 }

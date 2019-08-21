@@ -71,7 +71,7 @@
                                 <th> Telefono </th>
                                 <th> Estado </th>
                                 <th> Rol </th>
-                                <th> Editar/Eliminar </th>
+                                <th> Detalles/Editar </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -110,7 +110,6 @@
                                         </td>
                                     @endif
 
-                                    {{-- <td class="center"> {{ $user->rol_id }} </td> --}}
                                     @foreach($roleusers as $roluser)
                                         @if($roluser->user_id == $user->id)
                                              @foreach($roles as $rol)
@@ -137,6 +136,10 @@
                                             <ul class="dropdown-menu pull-left" role="menu">
                                                 <li>
                                                     <a href="">
+                                                        <i class="icon-docs"></i> Detalles </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
                                                         <i class="icon-docs"></i> Editar </a>
                                                 </li>
                         
@@ -144,10 +147,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                            @endforeach
-                            
-                         
-                            
+                            @endforeach                    
                         </tbody>
                     </table>
                 </div>

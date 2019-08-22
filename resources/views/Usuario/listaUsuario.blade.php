@@ -37,12 +37,27 @@
                                 <div class="btn-group">
                                     <a href="{{ route('usuario.agrega') }}">
                                     <button id="sample_editable_1_new" class="btn sbold green"> Agregar Usuario                                       
-                                        <i class="fa fa-plus"></i> 
+                                        <i class="icon-user-follow"></i> 
                                     </button>
                                     </a>
                                 </div>
                             </div>
-                
+
+
+
+
+                            <div class="col-md-6">
+                                <div class="btn-group">
+                                    <a href="{{ route('usuario.agrega2') }}">
+                                    <button id="sample_editable_1_new" class="btn sbold green"> Agregar Usuario 2                                      
+                                        <i class="icon-user-follow"></i> 
+                                    </button>
+                                    </a>
+                                </div>
+                            </div>
+
+
+
                             <div class="col-md-6">
                                 <div class="btn-group pull-right">
                                     <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">Opciones
@@ -132,18 +147,29 @@
                                     @endforeach
                                     <td>
                                         <div class="btn-group">
-                                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Acciones
+                                            <button class="btn btn btn-danger btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Acciones
                                                 <i class="fa fa-angle-down"></i>
                                             </button>
                                             <ul class="dropdown-menu pull-left" role="menu">
                                                 <li>
                                                     <a href="">
-                                                        <i class="icon-docs"></i> Detalles </a>
+                                                        <i class="fa fa-search"></i> Detalles </a>
                                                 </li>
                                                 <li>
                                                     <a href="">
-                                                        <i class="icon-docs"></i> Editar </a>
+                                                        <i class="fa fa-pencil-square"></i> Editar </a>
                                                 </li>
+
+                                                 <li>
+                                                    <a href="">
+                                                        <i class="fa fa-check"></i> Habilitar </a>
+                                                </li>
+
+                                                 <li>
+                                                    <a href="">
+                                                        <i class="fa fa-ban"></i> Deshabilitar </a>
+                                                </li>
+
                         
                                             </ul>
                                         </div>

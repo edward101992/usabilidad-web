@@ -22,10 +22,14 @@ class UserController extends Controller
 		return view('Usuario.agregarUsuario');
 	}
 
+	public function agregaUsuario2(){
+		return view('AdministradorViews.agregarUsuario');
+	}
+
 	public function insertarUsuario(){
 
 
-		  $datos = request()->all();
+		$datos = request()->all();
         $user = User::create([
             'name'=> $datos['nombre'],
             'usuario_apellido'=> $datos['usuario_apellido'],

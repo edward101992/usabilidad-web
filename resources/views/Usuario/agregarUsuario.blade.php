@@ -175,8 +175,8 @@
                                 <div class="col-md-4">
                                     <select class="bs-select form-control" data-width="75%" name="usuario_genero">
                                        <td style="color:#01DF01;" class="center">
-                                       <option value="1" selected >Masculino</option>
-                                       <option value="2" >Femenino</option>                                  
+                                       <option value="0" selected >Masculino</option>
+                                       <option value="1" >Femenino</option>                                  
                                        <option value="3">Otro</option>
                                     </select>
                                 </div>

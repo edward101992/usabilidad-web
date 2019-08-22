@@ -64,7 +64,7 @@
                             <ul class="sub-menu">
                                
                                 <li class="nav-item  ">
-                                    <a href="{{ asset('ListaUsuarios') }}" class="nav-link ">
+                                    <a href="{{ route('usuario.lista') }}" class="nav-link ">
                                         <i class="icon-user-following"></i>
                                         <span class="title">Gestion de Usuarios</span>
                                     </a>

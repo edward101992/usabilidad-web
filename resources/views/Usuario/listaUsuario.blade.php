@@ -1,5 +1,6 @@
 @extends('PlantillaViews.layout')
 @section('contenido')  
+
 @if(Entrust::can('ver-usuario'))   
     <div class="page-bar">
         <ul class="page-breadcrumb">
@@ -18,6 +19,7 @@
         </ul>
     </div>
 <div class="row">
+
         <div class="col-md-12">
             <!-- BEGIN EXAMPLE TABLE PORTLET-->
             <div class="portlet light ">
@@ -33,7 +35,7 @@
 
                            <div class="col-md-6">
                                 <div class="btn-group">
-                                    <a href="">
+                                    <a href="{{ route('usuario.agrega') }}">
                                     <button id="sample_editable_1_new" class="btn sbold green"> Agregar Usuario                                       
                                         <i class="fa fa-plus"></i> 
                                     </button>

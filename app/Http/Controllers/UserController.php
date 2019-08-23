@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Role;
 use App\RoleUser;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -16,18 +17,21 @@ class UserController extends Controller
 		$roles=Role::all();
 		$roleusers=RoleUser::all();
 		$users=User::all();
-		return view('Usuario.listaUsuario', compact('roles','roleusers','users','nombreRol','nombrePag'));  
+		return view('AdministradorViews.listaUsuario', compact('roles','roleusers','users','nombreRol','nombrePag'));  
 	}
 	public function agregaUsuario(){
-		return view('Usuario.agregarUsuario');
-	}
-
-	public function agregaUsuario2(){
 		return view('AdministradorViews.agregarUsuario');
 	}
 
-	public function insertarUsuario(){
+	public function editaUsuario(User $user){
+	    $rol_user = RoleUser::where('user_id', Auth::user()->id)->value('role_id');
+        $rol = Role::find($rol_user);
+		return view('AdministradorViews.editarUsuario', compact('user','rol'));
 
+
+	}
+
+	public function insertarUsuario(){
 
 		$datos = request()->all();
         $user = User::create([

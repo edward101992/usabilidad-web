@@ -71,7 +71,7 @@
                                 </li>
 
                                  <li class="nav-item  ">
-                                    <a href="" class="nav-link ">
+                                    <a href="{{ route('usuario.agrega') }}" class="nav-link ">
                                         <i class=" icon-user-follow"></i>
                                         <span class="title">Agregar Usuario</span>
                                     </a>

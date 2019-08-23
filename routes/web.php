@@ -19,7 +19,7 @@ Route::get('/', function () {
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('Usabilidad-Web/ListaUsuarios','UserController@listaUsuario')->name('usuario.lista');
 Route::get('Usabilidad-Web/AgregarUsuario','UserController@agregaUsuario')->name('usuario.agrega');
-Route::get('Usabilidad-Web/AgregarUsuario2','UserController@agregaUsuario2')->name('usuario.agrega2');
+Route::get('Usabilidad-Web/EditarUsuario','UserController@editaUsuario')->name('usuario.edita');
 Route::post('Usabilidad-Web/InsertarUsuario','UserController@insertarUsuario')->name('usuario.insertar');
 Route::get('/Inicio', 'InicioController@inicio');
 

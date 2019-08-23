@@ -32,8 +32,8 @@
                 <div class="portlet-body">
                     <div class="table-toolbar">
                         <div class="row">
-
-                           <div class="col-md-6">
+                   
+                             <div class="col-md-6">
                                 <div class="btn-group">
                                     <a href="{{ route('usuario.agrega') }}">
                                     <button id="sample_editable_1_new" class="btn sbold green"> Agregar Usuario                                       
@@ -42,20 +42,6 @@
                                     </a>
                                 </div>
                             </div>
-
-
-
-
-                            <div class="col-md-6">
-                                <div class="btn-group">
-                                    <a href="{{ route('usuario.agrega2') }}">
-                                    <button id="sample_editable_1_new" class="btn sbold green"> Agregar Usuario 2                                      
-                                        <i class="icon-user-follow"></i> 
-                                    </button>
-                                    </a>
-                                </div>
-                            </div>
-
 
 
                             <div class="col-md-6">
@@ -152,11 +138,7 @@
                                             </button>
                                             <ul class="dropdown-menu pull-left" role="menu">
                                                 <li>
-                                                    <a href="">
-                                                        <i class="fa fa-search"></i> Detalles </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
+                                                    <a href="{{ route('usuario.edita') }}">
                                                         <i class="fa fa-pencil-square"></i> Editar </a>
                                                 </li>
 

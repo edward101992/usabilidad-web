@@ -94,6 +94,12 @@
                                     <span class="title">Gestionar Plataformas</span>
                                 </a>
                             </li>
+                              <li class="nav-item start ">
+                                <a href="" class="nav-link ">
+                                    <i class="fa fa-hand-o-right"></i>
+                                    <span class="title">Agregar Plataforma</span>
+                                </a>
+                            </li>
                             </ul>
                         </li>
                         @endif

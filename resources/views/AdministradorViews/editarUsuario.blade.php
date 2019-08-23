@@ -1,6 +1,6 @@
 @extends('PlantillaViews.layout')
 @section('contenido') 
-@if(Entrust::can('ver-usuario')) 
+@if(Entrust::can('editar-usuario')) 
 <h1 class="page-title"> Editar Perfil
                     </h1>
                     <!-- END PAGE HEADER-->
@@ -165,7 +165,7 @@
 @endsection
 @section('descripcionPag')
          <div class="note note-info">
-            <p>Lista de usuarios regstrados en la plataforma </p>
+            <p>Editar perfil de usuarios registrados en la plataforma </p>
         </div>
 @endsection
              

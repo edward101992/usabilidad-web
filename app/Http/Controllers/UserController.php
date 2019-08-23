@@ -28,7 +28,6 @@ class UserController extends Controller
         $rol = Role::find($rol_user);
 		return view('AdministradorViews.editarUsuario', compact('user','rol'));
 
-
 	}
 
 	public function insertarUsuario(){

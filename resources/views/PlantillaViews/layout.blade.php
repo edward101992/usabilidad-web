@@ -55,13 +55,14 @@ License: You must have a valid license purchased only from themeforest(the above
                         </button>
                         <ul class="dropdown-menu" role="menu">
                             <li>
+                                
                                 <a href="javascript:;">
                                     <i class="icon-flag"></i> Plataforma
                                     <span class="badge badge-success"></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;">
+                                <a href="{{ route('usuario.agrega') }}">
                                     <i class="icon-users"></i> Usuarios
                                     <span class="badge badge-danger"></span>
                                 </a>

@@ -138,7 +138,8 @@
                                             </button>
                                             <ul class="dropdown-menu pull-left" role="menu">
                                                 <li>
-                                                    <a href="{{ route('usuario.edita') }}">
+                                                    
+                                                     <a href="{{ route('usuario.edita',['id' => $user->id]) }}">
                                                         <i class="fa fa-pencil-square"></i> Editar </a>
                                                 </li>
 
@@ -171,7 +172,7 @@
 @endsection
 @section('descripcionPag')
          <div class="note note-info">
-            <p>Lista de usuarios regstrados en la plataforma </p>
+            <p>Lista de usuarios registrados en la plataforma </p>
         </div>
 @endsection
                    

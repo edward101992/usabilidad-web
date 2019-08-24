@@ -18,6 +18,8 @@
             <script src="../assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>
             <script src="../assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
             <script src="../assets/pages/scripts/table-datatables-managed.min.js" type="text/javascript"></script>
+            <script src="../assets/pages/scripts/table-datatables-responsive.min.js" type="text/javascript"></script>
+
 
 
             <!-- END THEME GLOBAL SCRIPTS -->
@@ -36,6 +38,9 @@
                     });
                 })
             </script>
+
+
+
 
 
 

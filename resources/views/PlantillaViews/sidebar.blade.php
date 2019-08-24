@@ -89,7 +89,7 @@
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item start ">
-                                <a href="" class="nav-link ">
+                                <a href="{{ route('plataforma.lista') }}" class="nav-link ">
                                     <i class="fa fa-hand-o-right"></i>
                                     <span class="title">Gestionar Plataformas</span>
                                 </a>
@@ -100,6 +100,30 @@
                                     <span class="title">Agregar Plataforma</span>
                                 </a>
                             </li>
+                             <li class="nav-item start ">
+                                <a href="" class="nav-link ">
+                                    <i class="fa fa-hand-o-right"></i>
+                                    <span class="title">Asignar Evaluador</span>
+                                </a>
+                            </li>
+                              <li class="nav-item start ">
+                                <a href="" class="nav-link ">
+                                    <i class="fa fa-hand-o-right"></i>
+                                    <span class="title">Observaciones</span>
+                                </a>
+                            </li>
+                             <li class="nav-item start ">
+                                <a href="" class="nav-link ">
+                                    <i class="fa fa-hand-o-right"></i>
+                                    <span class="title">Cuestionario</span>
+                                </a>
+                                <ul class="sub-menu">
+                                        <li class="nav-item active open">
+                                            <a href="charts_highcharts.html" class="nav-link "> Preguntas </a>
+                                        </li>
+                                </ul>
+                            </li>
+                            
                             </ul>
                         </li>
                         @endif

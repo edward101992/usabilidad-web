@@ -25,8 +25,8 @@ Route::get('Usabilidad-Web/AgregarUsuario','UserController@agregaUsuario')->name
 Route::get('Usabilidad-Web/EditarUsuario','UserController@editaUsuario')->name('usuario.edita');
 Route::post('Usabilidad-Web/InsertarUsuario','UserController@insertarUsuario')->name('usuario.insertar');
 Route::get('Usabilidad-Web/AgregarPlataforma','PlataformaController@agregaPlataforma')->name('plataforma.agrega');
-Route::get('Usabilidad-Web/EditarPlataforma','PlataformaControlle@editaPlataforma')->name('plataforma.edita');
-Route::get('Usabilidad-Web/ListaPlataforma','PlataformaControlle@listaPlataforma')->name('plataforma.lista');
+Route::get('Usabilidad-Web/EditarPlataforma','PlataformaController@editaPlataforma')->name('plataforma.edita');
+Route::get('Usabilidad-Web/ListaPlataforma','PlataformaController@listaPlataforma')->name('plataforma.lista');
 Route::post('Usabilidad-Web/InsertarPlataforma','UserController@insertarPlataforma')->name('plataforma.insertar');
 
 

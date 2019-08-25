@@ -87,10 +87,10 @@
                                                                 <input type="text" value="{{ $user->name }}" placeholder="{{ $user->name }}" class="form-control" name="name"/> </div>
                                                             <div class="form-group">
                                                                 <label class="control-label">Apellido</label>
-                                                                <input type="text" value="{{ $user->lastname }}" placeholder="{{ $user->lastname }}" class="form-control" name="lastname"/> </div>
+                                                                <input type="text" value="{{ $user->usuario_apellido }}" placeholder="{{ $user->usuario_apellido }}" class="form-control" name="lastname"/> </div>
                                                             <div class="form-group">
                                                                 <label class="control-label">Numero de Telefono</label>
-                                                                <input type="text" value="{{ $user->telefono }}" placeholder="{{ $user->telefono }}" class="form-control" name="number"/> </div>
+                                                                <input type="text" value="{{ $user->usuario_telefono }}" placeholder="{{ $user->telefono }}" class="form-control" name="number"/> </div>
                                                             
                                                             <div class="form-group">
                                                                 <label class="control-label">Email</label>

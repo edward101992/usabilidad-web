@@ -7,6 +7,7 @@ use App\Role;
 use App\RoleUser;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Image;
 
 class UserController extends Controller
 {
@@ -38,6 +39,14 @@ class UserController extends Controller
 	public function insertarUsuario(){
 
 		$datos = request()->all();
+		$ruta = public_path().'/imagenes/Usuarios/';
+        $imagenOriginal = $datos['avatar'];
+        $imagen = Image::make($imagenOriginal);
+        $temp_name = $this->random_string() . '.' . $imagenOriginal->getClientOriginalExtension();
+        $imagen->resize(300,300);
+        $imagen->save($ruta . $temp_name, 100);
+
+		
         $user = User::create([
             'name'=> $datos['nombre'],
             'usuario_apellido'=> $datos['usuario_apellido'],
@@ -46,10 +55,12 @@ class UserController extends Controller
             'email'=> $datos['email'],
             'usuario_genero' => $datos['usuario_genero'],
             'usuario_estado'=>$datos['usuario_estado'],
-            'password'=>bcrypt($datos['password'])
+            'password'=>bcrypt($datos['password']),
+            'usuario_imagen'=>$temp_name
         ]); 
         $role = Role::where('id', '=', $datos['role_id'])->first();
         $user->attachRole($role);
+        dd($datos);
         return redirect()->route('usuario.lista');
 
 	}

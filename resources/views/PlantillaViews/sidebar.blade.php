@@ -95,7 +95,7 @@
                                 </a>
                             </li>
                               <li class="nav-item start ">
-                                <a href="" class="nav-link ">
+                                <a href="{{ route('plataforma.agrega') }}" class="nav-link ">
                                     <i class="fa fa-hand-o-right"></i>
                                     <span class="title">Agregar Plataforma</span>
                                 </a>

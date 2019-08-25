@@ -1,5 +1,5 @@
  <!-- BEGIN CORE PLUGINS -->
-            @yield('scriptTabla');
+            @yield('scriptTabla')
             <script src="../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
             <script src="../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
             <script src="../assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
@@ -14,6 +14,12 @@
             <script src="../assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js" type="text/javascript"></script>
             <script src="../assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
             <script src="../assets/pages/scripts/profile.min.js" type="text/javascript"></script>
+
+            @yield('scriptAddColumna')
+            <!-- MAXIMO DE CARACTERES -->
+            <script src="../assets/pages/scripts/components-bootstrap-maxlength.min.js" type="text/javascript"></script>
+            <script src="../assets/global/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
+
                 <!-- DATATABLE -->
             <script src="../assets/global/scripts/datatable.js" type="text/javascript"></script>
             <script src="../assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>
@@ -37,6 +43,8 @@
                     });
                 })
             </script>
+
+
 
 
 

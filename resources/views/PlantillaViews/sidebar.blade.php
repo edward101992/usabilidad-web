@@ -45,9 +45,9 @@
 
                             @if(Entrust::hasRole('administrador'))
                             <li class="nav-item start ">
-                                <a href="" class="nav-link ">
+                                <a href="{{ route('plataforma.editar.inicio') }}" class="nav-link ">
                                     <i class="fa fa-hand-o-right"></i>
-                                    <span class="title">Modificar Bienvenido</span>
+                                    <span class="title">Modificar Inicio</span>
                                 </a>
                             </li>
                             @endif  
@@ -101,13 +101,13 @@
                                 </a>
                             </li>
                              <li class="nav-item start ">
-                                <a href="" class="nav-link ">
+                                <a href="{{ route('plataforma.asignarEvaluador') }}" class="nav-link ">
                                     <i class="fa fa-hand-o-right"></i>
                                     <span class="title">Asignar Evaluador</span>
                                 </a>
                             </li>
                               <li class="nav-item start ">
-                                <a href="" class="nav-link ">
+                                <a href="{{ route('plataforma.observacion') }}" class="nav-link ">
                                     <i class="fa fa-hand-o-right"></i>
                                     <span class="title">Observaciones</span>
                                 </a>
@@ -119,7 +119,11 @@
                                 </a>
                                 <ul class="sub-menu">
                                         <li class="nav-item active open">
-                                            <a href="charts_highcharts.html" class="nav-link "> Preguntas </a>
+                                            <a href="{{ route('plataforma.cuestionario.ver') }}" class="nav-link "> Preguntas </a>
+                                        </li>
+
+                                         <li class="nav-item active open">
+                                            <a href="{{ route('plataforma.cuestionario.edita') }}" class="nav-link "> Editar Preguntas </a>
                                         </li>
                                 </ul>
                             </li>
@@ -136,11 +140,11 @@
                             </a>
                             <ul class="sub-menu">
                                  <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{ route('plataforma.reporte.plataforma') }}" class="nav-link">
                                         <i class="icon-bar-chart"></i> Plataforma </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="#" class="nav-link ">
+                                    <a href="{{ route('plataforma.reporte.usuario') }}" class="nav-link ">
                                         <i class="icon-user-following"></i>
                                         <span class="title">Usuarios</span>
                                     </a>
@@ -156,7 +160,7 @@
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="javascript:;" class="nav-link nav-toggle">
+                                    <a href="{{ route('usuario.configuracionCuenta') }}" class="nav-link nav-toggle">
                                         <i class="icon-settings"></i> Cuenta
                                         <span class="arrow"></span>
                                     </a>

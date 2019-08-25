@@ -4,6 +4,6 @@
 
 @section('descripcionPag')
          <div class="note note-info">
-            <p>Configuracion Cuenta </p>
+            <p>Reporte de Plataforma </p>
         </div>
 @endsection

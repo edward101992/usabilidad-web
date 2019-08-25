@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Role;
 use App\RoleUser;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Image;
@@ -40,12 +41,13 @@ class UserController extends Controller
 
 		$datos = request()->all();
 		$ruta = public_path().'/imagenes/Usuarios/';
-        $imagenOriginal = $datos['avatar'];
+        $imagenOriginal = $datos['usuario_imagen'];
         $imagen = Image::make($imagenOriginal);
-        $temp_name = $this->random_string() . '.' . $imagenOriginal->getClientOriginalExtension();
+        //$temp_name = $this->random_string() . '.' . $imagenOriginal->getClientOriginalExtension();
+        $temp_name = $this->str_random($length = 16)() . '.' . $imagenOriginal->getClientOriginalExtension();
         $imagen->resize(300,300);
         $imagen->save($ruta . $temp_name, 100);
-
+ 
 		
         $user = User::create([
             'name'=> $datos['nombre'],

@@ -49,7 +49,7 @@
                                 <span class="btn default btn-file">
                                     <span class="fileinput-new"> Buscar </span>
                                     <span class="fileinput-exists"> Cambiar </span>
-                                    <input type="file" name="avatar"> </span>
+                                    <input type="file" name="usuario_imagen" accept="image/*"> </span>
                                     <a href="javascript:;" class="btn default fileinput-exists" data-dismiss="fileinput"> Cancelar </a>
                                     <span class="label label-info">Si no agrega una imagen se insertara una por defecto.</span>
                                 </div>

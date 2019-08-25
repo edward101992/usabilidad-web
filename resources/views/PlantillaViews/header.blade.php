@@ -10,7 +10,7 @@
         <!-- OTROS LINKS -->
         <link href="../assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css" />
         <link href="../assets/pages/css/profile.min.css" rel="stylesheet" type="text/css" />
-
+        @yield('linkDatatable')       
 
         <link href="../assets/global/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
         <link href="../assets/global/css/plugins-md.min.css" rel="stylesheet" type="text/css" />
@@ -21,4 +21,6 @@
         <link href="../assets/layouts/layout2/css/custom.min.css" rel="stylesheet" type="text/css" />
         <!-- END THEME LAYOUT STYLES -->
         <link rel="shortcut icon" href="favicon.ico" />
+
+
 

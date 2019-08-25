@@ -22,7 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
  */
 Route::get('Usabilidad-Web/ListaUsuarios','UserController@listaUsuario')->name('usuario.lista');
 Route::get('Usabilidad-Web/AgregarUsuario','UserController@agregaUsuario')->name('usuario.agrega');
-Route::get('Usabilidad-Web/EditarUsuario','UserController@editaUsuario')->name('usuario.edita');
+Route::get('Usabilidad-Web/EditarUsuario{user}','UserController@editaUsuario')->name('usuario.edita');
 Route::post('Usabilidad-Web/InsertarUsuario','UserController@insertarUsuario')->name('usuario.insertar');
 Route::get('Usabilidad-Web/AgregarPlataforma','PlataformaController@agregaPlataforma')->name('plataforma.agrega');
 Route::get('Usabilidad-Web/EditarPlataforma','PlataformaController@editaPlataforma')->name('plataforma.edita');

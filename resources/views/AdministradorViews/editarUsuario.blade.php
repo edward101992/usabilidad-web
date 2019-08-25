@@ -168,4 +168,7 @@
             <p>Editar perfil de usuarios registrados en la plataforma </p>
         </div>
 @endsection
-             
+
+@section('scriptTabla')
+<script src="../assets/pages/scripts/table-datatables-responsive.min.js" type="text/javascript"></script>
+@endsection             

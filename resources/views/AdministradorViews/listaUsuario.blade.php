@@ -96,7 +96,8 @@
                                      <td> 
                                         {{ $user->usuario_documento }} 
                                     </td> 
-                                    <td class="center"> {{ $user->usuario_telefono }} 
+                                    <td class="center"> 
+                                        {{ $user->usuario_telefono }} 
                                     </td>
                                     @if($user->usuario_estado == 1)
                                         <td style="color:#01DF01;" class="center">

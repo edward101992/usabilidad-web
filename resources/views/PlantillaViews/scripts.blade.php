@@ -1,4 +1,5 @@
  <!-- BEGIN CORE PLUGINS -->
+            @yield('scriptTabla');
             <script src="../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
             <script src="../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
             <script src="../assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
@@ -18,8 +19,6 @@
             <script src="../assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>
             <script src="../assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
             <script src="../assets/pages/scripts/table-datatables-managed.min.js" type="text/javascript"></script>
-            <script src="../assets/pages/scripts/table-datatables-responsive.min.js" type="text/javascript"></script>
-
 
 
             <!-- END THEME GLOBAL SCRIPTS -->

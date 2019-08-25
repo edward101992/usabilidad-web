@@ -14,6 +14,16 @@
                                     
                                         {{-- <img src="{{ asset('assets/pages/img/avatars/team1.jpg') }}" class="img-responsive" alt=""> </div> --}}
                                     <!-- END SIDEBAR USERPIC -->
+
+
+ <!-- SIDEBAR USERPIC -->
+                                    <div class="profile-userpic">
+                                        <img src="../imagenes/Usuarios/{{ $user->usuario_imagen }}" class="img-responsive" alt=""> </div> 
+                                        {{-- <img src="{{ asset('assets/pages/img/avatars/team1.jpg') }}" class="img-responsive" alt=""> </div> --}}
+                                    <!-- END SIDEBAR USERPIC -->
+                                    <!-- SIDEBAR USER TITLE -->
+
+
                                     <!-- SIDEBAR USER TITLE -->
                                     <div class="profile-usertitle">
                                         <div class="profile-usertitle-name">{{ $user->name }} {{ $user->usuario_apellido }}</div>

@@ -44,7 +44,7 @@ class UserController extends Controller
         $imagenOriginal = $datos['usuario_imagen'];
         $imagen = Image::make($imagenOriginal);
         //$temp_name = $this->random_string() . '.' . $imagenOriginal->getClientOriginalExtension();
-        $temp_name = $this->str_random($length = 16)() . '.' . $imagenOriginal->getClientOriginalExtension();
+        $temp_name =  str_random(). '.' .$imagenOriginal->getClientOriginalExtension();
         $imagen->resize(300,300);
         $imagen->save($ruta . $temp_name, 100);
  
@@ -62,7 +62,6 @@ class UserController extends Controller
         ]); 
         $role = Role::where('id', '=', $datos['role_id'])->first();
         $user->attachRole($role);
-        dd($datos);
         return redirect()->route('usuario.lista');
 
 	}

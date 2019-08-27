@@ -1,4 +1,17 @@
+@extends('PlantillaViews.layout')
+@section('contenido')
 
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="icon-home"></i>
+            Home
+            <i class="fa fa-angle-right"></i>
+        </li>
+</ul>
+</div>
+
+          <div class="portlet light portlet-fit portlet-form ">
             <div class="page-content-wrapper">
                 <!-- BEGIN CONTENT BODY -->
                 <div class="page-content">
@@ -102,4 +115,11 @@
                 </div>
                 <!-- END CONTENT BODY -->
             </div>
-           
+        </div>
+           @endsection
+
+           @section('descripcionPag')
+         <div class="note note-info">
+            <p>Configuracion Cuenta </p>
+        </div>
+@endsection

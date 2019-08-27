@@ -19,7 +19,7 @@
             <!-- MAXIMO DE CARACTERES -->
             <script src="../assets/pages/scripts/components-bootstrap-maxlength.min.js" type="text/javascript"></script>
             <script src="../assets/global/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
-
+            @yield('scriptEditarPlataforma')
                 <!-- DATATABLE -->
             <script src="../assets/global/scripts/datatable.js" type="text/javascript"></script>
             <script src="../assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>

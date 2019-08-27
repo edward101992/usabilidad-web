@@ -936,19 +936,67 @@ License: You must have a valid license purchased only from themeforest(the above
                     <li>
                         <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank" class="active">
                             <span>Tarea 1</span>
-                            <i class="icon-basket"></i>
+                            
                         </a>
                     </li>
                     <li>
                         <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/reviews/4021469?ref=keenthemes" target="_blank">
                             <span>Tarea 2</span>
-                            <i class="icon-users"></i>
+                           
                         </a>
                     </li>
                     <li>
                         <a href="http://keenthemes.com/showcast/" target="_blank">
                             <span>Tarea 3</span>
-                            <i class="icon-user"></i>
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank" class="active">
+                            <span>Tarea 4</span>
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank" class="active">
+                            <span>Tarea 5</span>
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank" class="active">
+                            <span>Tarea 6</span>
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank" class="active">
+                            <span>Tarea 7</span>
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank" class="active">
+                            <span>Tarea 8</span>
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank" class="active">
+                            <span>Tarea 10</span>
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank" class="active">
+                            <span>Tarea 10</span>
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank" class="active">
+                            <span>Tarea 10</span>
+                            
                         </a>
                     </li>
                     <li>

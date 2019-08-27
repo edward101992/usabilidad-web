@@ -71,7 +71,7 @@
                                             <ul class="dropdown-menu pull-left" role="menu">
                                                 <li>
                                                     
-                                                     <a href="">
+                                                     <a href="{{ route('plataforma.edita') }}">
                                                         <i class="fa fa-pencil-square"></i> Editar </a>
                                                 </li>
 

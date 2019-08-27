@@ -1,8 +1,8 @@
-
+        
             <div class="page-content-wrapper">
                 <!-- BEGIN CONTENT BODY -->
                 <div class="page-content">
-                    <!-- BEGIN PAGE HEADER-->
+                      <!-- BEGIN PAGE HEADER-->
                     <!-- BEGIN THEME PANEL -->
                     <div class="theme-panel">
                         <div class="toggler tooltips" data-container="body" data-placement="left" data-html="true" data-original-title="Click to open advance theme customizer panel">
@@ -85,7 +85,6 @@
                         @if(Entrust::hasRole('administrador'))
                             Bienvenido Administrador
                         @endif 
-
                         @if(Entrust::hasRole('evaluador'))
                             Bienvenido Evaluador
                         @endif  
@@ -102,4 +101,8 @@
                 </div>
                 <!-- END CONTENT BODY -->
             </div>
-           
+            <!-- END CONTENT -->
+            <!-- BEGIN QUICK SIDEBAR -->
+
+            <!-- END QUICK SIDEBAR -->
+        

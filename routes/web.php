@@ -53,7 +53,7 @@ Route::get('Usabilidad-Web/ReporteUsuario','PlataformaController@reporteUsuario'
 
 Route::get('Usabilidad-Web/EditarInicio','PlataformaController@editarInicio')->name('plataforma.editar.inicio');
 
-Route::post('Usabilidad-Web/InsertarPlataforma','UserController@insertarPlataforma')->name('plataforma.insertar');
+Route::post('Usabilidad-Web/InsertarPlataforma','PlataformaController@insertarPlataforma')->name('plataforma.insertar');
 
 
 /**

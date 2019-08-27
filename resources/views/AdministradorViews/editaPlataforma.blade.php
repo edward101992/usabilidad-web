@@ -22,7 +22,7 @@
                                         <div class="col-md-3">
                                             <ul class="list-unstyled profile-nav">
                                                 <li>
-                                                    <img src="../assets/pages/media/profile/people19.png" class="img-responsive pic-bordered" alt="" />
+                                                    <img src="../assets/pages/media/profile/people19.jpg" class="img-responsive pic-bordered" alt="" />
                                                     <a href="javascript:;" class="profile-edit"> Editar </a>
                                                 </li>
                                                 

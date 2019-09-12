@@ -39,7 +39,22 @@ class UserController extends Controller
 
 	public function insertarUsuario(){
 
-		$datos = request()->all();
+
+		$datos = request()->validate([
+			'name'=> 'required',
+			'usuario_apellido'=> 'required',
+			'usuario_documento'=> 'required',
+			'usuario_telefono'=> 'required',
+			'email'=> 'required',
+			'usuario_genero' => 'required',
+			'usuario_estado' => 'required',
+			'password'=> 'required',
+		],[
+			'name.required' => 'Camppo oblegatorio'
+
+		]);
+
+
 		$ruta = public_path().'/imagenes/Usuarios/';
         $imagenOriginal = $datos['usuario_imagen'];
         $imagen = Image::make($imagenOriginal);

@@ -27,6 +27,11 @@
         </div>
     </div>
 
+
+    @if($errors->any())
+        <script>toastr.success()</script>
+    @endif
+
     <div class="portlet-body">
        <form action="{{ url('Usabilidad-Web/InsertarUsuario') }}" method="POST" class="form-horizontal" enctype="multipart/form-data">
            {{ csrf_field() }}

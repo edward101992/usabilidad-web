@@ -8,18 +8,22 @@
             <script src="../assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
             <!-- END CORE PLUGINS -->
             <!-- BEGIN THEME GLOBAL SCRIPTS -->
+            <!-- Toarst alerts -->
+            <script src="../assets/global/plugins/bootstrap-toastr/toastr.min.js" type="text/javascript"></script>
             <script src="../assets/global/scripts/app.min.js" type="text/javascript"></script>
             <!-- OTROS SCRIPS DE PAGINAS -->
                 <!-- FOTO -->
             <script src="../assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js" type="text/javascript"></script>
             <script src="../assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
             <script src="../assets/pages/scripts/profile.min.js" type="text/javascript"></script>
-
+            
             @yield('scriptAddColumna')
             <!-- MAXIMO DE CARACTERES -->
             <script src="../assets/pages/scripts/components-bootstrap-maxlength.min.js" type="text/javascript"></script>
             <script src="../assets/global/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
             @yield('scriptEditarPlataforma')
+            <script src="../assets/pages/scripts/ui-toastr.min.js" type="text/javascript"></script>
+
                 <!-- DATATABLE -->
             <script src="../assets/global/scripts/datatable.js" type="text/javascript"></script>
             <script src="../assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>

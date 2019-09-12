@@ -248,6 +248,8 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="page-content">
                     <!-- BEGIN PAGE HEADER-->
                     <!-- BEGIN THEME PANEL -->
+
+                    @if(Entrust::hasRole('evaluador'))
                     <div class="theme-panel">
                         <div class="toggler tooltips" data-container="body" data-placement="left" data-html="true" data-original-title="Click to open advance theme customizer panel">
                             <i class="icon-settings"></i>
@@ -257,7 +259,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="theme-options">
                             <div class="theme-option theme-colors clearfix">
-                                <span> TEMA </span>
+                                <span> CUESTIONARIO </span>
                                 <ul>
                                     <li class="color-default current tooltips" data-style="default" data-container="body" data-original-title="Default"> </li>
                                     <li class="color-grey tooltips" data-style="grey" data-container="body" data-original-title="Grey"> </li>
@@ -324,6 +326,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div>
                         </div>
                     </div>
+                    @endif
                     <!-- END THEME PANEL -->
                     
 
@@ -928,15 +931,26 @@ License: You must have a valid license purchased only from themeforest(the above
        <!-- END FOOTER -->
             <!-- BEGIN QUICK NAV -->
             <!-- Tareas y Encuestas -->
+            @if(Entrust::hasRole('evaluador'))
+
             <nav class="quick-nav">
                 <a class="quick-nav-trigger" href="#0">
+
                     <span aria-hidden="true"></span>
                 </a>
                 <ul>
                     <li>
                         <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank" class="active">
-                            <span>Tarea 1</span>
+                            <span>Tarea 1</span> 
+
                             
+                        </a>
+                    </li>
+
+                      <li>
+                        <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank" class="active">
+                            <span>Purchase Metronic</span>
+                            <i class="icon-basket">Tarea ue hace</i>
                         </a>
                     </li>
                     <li>
@@ -1008,6 +1022,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 </ul>
                 <span aria-hidden="true" class="quick-nav-bg"></span>
             </nav>
+            @endif
             <div class="quick-nav-overlay"></div>
             <!-- END QUICK NAV -->
             <!--[if lt IE 9]>

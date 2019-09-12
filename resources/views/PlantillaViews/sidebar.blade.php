@@ -152,6 +152,25 @@
                             </ul>
                         </li>
                         @endif  
+                        @if(entrust::hasRole('evaluador'))
+                         <li class="nav-item  ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-layers"></i>
+                                <span class="title">Evaluar Plataformas</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                             <li class="nav-item start ">
+                                <a href="" class="nav-link ">
+                                    <i class="fa fa-hand-o-right"></i>
+                                    <span class="title">Biblioteca</span>
+                                   
+                                </a>
+                                
+                            </li>
+                        </ul>
+                    </li>
+                        @endif
                         <li class="nav-item  ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="icon-settings"></i>

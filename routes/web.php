@@ -21,13 +21,19 @@ Route::get('/home', 'HomeController@index')->name('home');
 /**
  * Rutas Administrador Usuario
  */
-Route::get('Usabilidad-Web/ListaUsuarios','UserController@listaUsuario')->name('usuario.lista');
 
-Route::get('Usabilidad-Web/AgregarUsuario','UserController@agregaUsuario')->name('usuario.agrega');
+Route::group(['prefix'=>'Usabilidad-Web'],function(){
 
-Route::get('Usabilidad-Web/EditarUsuario{user}','UserController@editaUsuario')->name('usuario.edita');
+	Route::get('ListaUsuarios','UserController@listaUsuario')->name('usuario.lista');
 
-Route::post('Usabilidad-Web/InsertarUsuario','UserController@insertarUsuario')->name('usuario.insertar');
+	Route::get('AgregarUsuario','UserController@agregaUsuario')->name('usuario.agrega');
+
+	Route::get('EditarUsuario{user}','UserController@editaUsuario')->name('usuario.edita');
+
+	Route::post('InsertarUsuario','UserController@insertarUsuario')->name('usuario.insertar');
+
+});
+
 
 /**
  * Rutas Administrador Plataforma

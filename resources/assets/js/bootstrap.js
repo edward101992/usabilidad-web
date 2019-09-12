@@ -11,6 +11,7 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap-sass');
+    toastr = require('toastr');
 } catch (e) {}
 
 /**

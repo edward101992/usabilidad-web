@@ -2956,22 +2956,22 @@
         },
         {
             "name": "yoeunes/toastr",
-            "version": "v1.2",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yoeunes/toastr.git",
-                "reference": "97913a7b14f20db1d9f5f9ad9414f49218b58a5c"
+                "reference": "2de7dc6e4997cfc24a40b07085dab32769a7b2d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yoeunes/toastr/zipball/97913a7b14f20db1d9f5f9ad9414f49218b58a5c",
-                "reference": "97913a7b14f20db1d9f5f9ad9414f49218b58a5c",
+                "url": "https://api.github.com/repos/yoeunes/toastr/zipball/2de7dc6e4997cfc24a40b07085dab32769a7b2d1",
+                "reference": "2de7dc6e4997cfc24a40b07085dab32769a7b2d1",
                 "shasum": ""
             },
             "require": {
-                "illuminate/session": "~5.5.0|~5.6.0|~5.7.0|~5.8.0",
-                "illuminate/support": "~5.5.0|~5.6.0|~5.7.0|~5.8.0",
-                "php": "^7.0|^7.1|^7.2"
+                "illuminate/session": "~5.5.0|~5.6.0|~5.7.0|~5.8.0|^6.0",
+                "illuminate/support": "~5.5.0|~5.6.0|~5.7.0|~5.8.0|^6.0",
+                "php": ">=7.0"
             },
             "type": "library",
             "extra": {
@@ -2999,9 +2999,9 @@
             "authors": [
                 {
                     "name": "Younes Khoubza",
-                    "role": "Developer",
                     "email": "younes.khoubza@gmail.com",
-                    "homepage": "https://github.com/yoeunes"
+                    "homepage": "https://github.com/yoeunes",
+                    "role": "Developer"
                 }
             ],
             "description": "toastr.js flush notifications for Laravel 5 and Lumen",
@@ -3013,7 +3013,7 @@
                 "flush notifications",
                 "laravel",
                 "laravel 5",
-                "laravel 5.8",
+                "laravel 6",
                 "laravel flush notifications",
                 "laravel notification",
                 "laravel notify",
@@ -3026,7 +3026,7 @@
                 "toastr js",
                 "yoeunes"
             ],
-            "time": "2019-04-15T09:14:21+00:00"
+            "time": "2019-09-06T22:01:27+00:00"
         },
         {
             "name": "zizaco/entrust",

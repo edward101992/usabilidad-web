@@ -43,18 +43,20 @@ class UserController extends Controller
 		$datos = request()->validate([
 			'name'=> 'required',
 			'usuario_apellido'=> 'required',
-			'usuario_documento'=> 'required',
-			'usuario_telefono'=> 'required',
-			'email'=> 'required',
-			'usuario_genero' => 'required',
-			'usuario_estado' => 'required',
-			'password'=> 'required',
+			'usuario_documento'=> 'required|numeric',
+			'usuario_telefono'=> 'numeric',
+			'email'=> 'required|email|unique:users,email',
+			'usuario_genero' => '',
+			'usuario_estado' => '',
+			'password'=> 'required|min:6',
+			'usuario_imagen' => 'image',
 		],[
-			'name.required' => 'Camppo oblegatorio'
+			'name.required' => 'Camppo oblegato'
 
 		]);
 
 
+		$datos = request()->all();
 		$ruta = public_path().'/imagenes/Usuarios/';
         $imagenOriginal = $datos['usuario_imagen'];
         $imagen = Image::make($imagenOriginal);

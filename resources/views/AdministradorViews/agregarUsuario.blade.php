@@ -26,12 +26,16 @@
             <span class="caption-subject font-green bold uppercase">Agregar Usuarios</span>
         </div>
     </div>
-
-
-    @if($errors->any())
-        <script>toastr.success()</script>
+  @if($errors->any())
+        <div class="alert alert-danger">
+            <p>Por favor digita....</p>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
     @endif
-
     <div class="portlet-body">
        <form action="{{ url('Usabilidad-Web/InsertarUsuario') }}" method="POST" class="form-horizontal" enctype="multipart/form-data">
            {{ csrf_field() }}
@@ -54,7 +58,8 @@
                                 <span class="btn default btn-file">
                                     <span class="fileinput-new"> Buscar </span>
                                     <span class="fileinput-exists"> Cambiar </span>
-                                    <input type="file" name="usuario_imagen" accept="image/*"> </span>
+                                    <input type="file" name="usuario_imagen" accept="image/*">
+                                 </span>
                                     <a href="javascript:;" class="btn default fileinput-exists" data-dismiss="fileinput"> Cancelar </a>
                                     <span class="label label-info">Si no agrega una imagen se insertara una por defecto.</span>
                                 </div>
@@ -71,7 +76,7 @@
                         <div class="col-md-4">
                             <div class="form-group form-md-line-input has-success form-md-floating-label">            
                                 <div class="input-icon">
-                                    <input type="text" name="nombre" class="form-control">
+                                    <input type="text" name="name" class="form-control" value="{{ old('name')}}">
                                     <label for="form_control_1">Nombre :</label>
                                     <span class="help-block">Digite el Nombre</span>
                                     <i class="icon-user-following"></i>
@@ -84,7 +89,7 @@
                         <div class="col-md-4">
                             <div class="form-group form-md-line-input has-success form-md-floating-label">            
                                 <div class="input-icon">
-                                    <input type="text" name="usuario_apellido" class="form-control">
+                                    <input id="" type="text" name="usuario_apellido" class="form-control" value="{{ old('usuario_apellido')}}">
                                     <label for="form_control_1">Apellido :</label>
                                     <span class="help-block">Digite el Apellido</span>
                                     <i class="icon-user-following"></i>
@@ -103,7 +108,7 @@
                         <div class="col-md-4">
                             <div class="form-group form-md-line-input has-success form-md-floating-label">            
                                 <div class="input-icon">
-                                    <input type="text" name="usuario_documento" class="form-control">
+                                    <input type="text" name="usuario_documento" class="form-control" value="{{ old('usuario_documento')}}">
                                     <label for="form_control_1">Documento :</label>
                                     <span class="help-block">Digite el Numero de Documento</span>
                                     <i class="icon-credit-card"></i>
@@ -118,7 +123,7 @@
                         <div class="col-md-3">
                             <div class="form-group form-md-line-input has-success form-md-floating-label">            
                                 <div class="input-icon">
-                                    <input type="text" name="usuario_telefono" class="form-control">
+                                    <input type="text" name="usuario_telefono" class="form-control"value="{{ old('usuario_telefono')}}" >
                                     <label for="form_control_1">Telefono :</label>
                                     <span class="help-block">Digite el Numero de Telefono</span>
                                     <i class="icon-call-in"></i>
@@ -203,7 +208,7 @@
                         <div class="col-md-4">
                             <div class="form-group form-md-line-input has-success form-md-floating-label">            
                                 <div class="input-icon">
-                                    <input type="email" name="email" class="form-control">
+                                    <input type="email" name="email" class="form-control" value="{{ old('email') }}">
                                     <label for="form_control_1">Correo :</label>
                                     <span class="help-block">Digite el Correo</span>
                                     <i class="icon-envelope"></i>

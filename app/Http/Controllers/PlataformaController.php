@@ -56,6 +56,7 @@ class PlataformaController extends Controller
 	}
 
 	public function listaObservacion(){
+		toastr()->info('User has been created!');
 		return view('AdministradorViews.listaObservacionPlataforma');
 	}
 

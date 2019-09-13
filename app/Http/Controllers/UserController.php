@@ -38,8 +38,6 @@ class UserController extends Controller
 	}
 
 	public function insertarUsuario(){
-
-
 		$datos = request()->validate([
 			'name'=> 'required',
 			'usuario_apellido'=> 'required',
@@ -49,9 +47,9 @@ class UserController extends Controller
 			'usuario_genero' => '',
 			'usuario_estado' => '',
 			'password'=> 'required|min:6',
-			'usuario_imagen' => 'image',
+
 		],[
-			'name.required' => 'Camppo oblegato'
+			'name.required' => 'Campo Nombre Obligatorio',
 
 		]);
 
@@ -67,7 +65,7 @@ class UserController extends Controller
  
 		
         $user = User::create([
-            'name'=> $datos['nombre'],
+            'name'=> $datos['name'],
             'usuario_apellido'=> $datos['usuario_apellido'],
             'usuario_documento'=> $datos['usuario_documento'],
             'usuario_telefono'=> $datos['usuario_telefono'],

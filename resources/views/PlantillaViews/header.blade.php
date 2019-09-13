@@ -11,7 +11,7 @@
         <link href="../assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css" />
         <link href="../assets/pages/css/profile.min.css" rel="stylesheet" type="text/css" />
         <link href="../assets/global/plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" type="text/css" />
-
+        @yield('linkToarst')
         @yield('linkEditarPlataforma')
         @yield('linkDatatable')   
         @yield('linkAddColumna')    

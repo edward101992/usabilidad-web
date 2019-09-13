@@ -22,6 +22,7 @@
             <script src="../assets/pages/scripts/components-bootstrap-maxlength.min.js" type="text/javascript"></script>
             <script src="../assets/global/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
             @yield('scriptEditarPlataforma')
+            @yield('scriptToastr')
             <script src="../assets/pages/scripts/ui-toastr.min.js" type="text/javascript"></script>
 
                 <!-- DATATABLE -->

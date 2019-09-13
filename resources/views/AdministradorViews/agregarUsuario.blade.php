@@ -1,6 +1,16 @@
- 
+ @section('linkToarst')
+ <link href="../assets/global/plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" type="text/css" />
+ @endsection
 @extends('PlantillaViews.layout')
 @section('contenido')  
+@jquery 
+@toastr_css 
+@toastr_js
+@toastr_render 
+@jquery 
+@toastr_css 
+@toastr_js
+@toastr_render 
 @if(Entrust::can('crear-usuario'))  
 <div class="page-bar">
     <ul class="page-breadcrumb">
@@ -252,4 +262,8 @@
             </div>
         </div>
         @endif
+        @endsection
+        @section('scriptToastr')
+            <script src="../assets/global/plugins/bootstrap-toastr/toastr.min.js" type="text/javascript"></script>
+            <script src="../assets/pages/scripts/ui-toastr.min.js" type="text/javascript"></script>
         @endsection

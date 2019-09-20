@@ -16,12 +16,17 @@ class CreatePlataformsTable extends Migration
         Schema::create('plataforms', function (Blueprint $table) {
             $table->increments('id');
             $table->string('plataforma_nombre');
-            $table->string('plataforma_fecha_creacion');
-            $table->boolean('plataforma_estado')->default(false);
-            $table->text('plataforma_descripcion');
-            $table->string('plataforma_logo');
-            $table->string('plataforma_url');
             $table->string('plataforma_manual')->default("manual.pdf");
+            $table->integer('plataforma_tiempo_desarrollo');
+            $table->string('plataforma_logo');
+            $table->text('plataforma_descripcion');
+            $table->integer('plataforma_lineas_codigo');
+            $table->float('plataforma_promedio_eficiencia');
+            $table->float('plataforma_promedio_satisfaccion');
+            $table->float('plataforma_promedio_eficacia');
+            $table->float('plataforma_total_usabilidad');
+            $table->boolean('plataforma_estado')->default(false);     
+            $table->string('plataforma_url');
             $table->timestamps();
         });
     }
@@ -34,5 +39,6 @@ class CreatePlataformsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('plataforms');
+
     }
 }

@@ -21,7 +21,15 @@ class Plataform extends Model
     ];
 
     public function hipervinculos(){
+       
         return $this->hasMany('App\UsabilidadPlataformModels\Hipervinculo');
+   
+    }
+
+    public function observaciones(){
+
+        return $this->hasMany('App\UsabilidadPlataformModels\Observacion');
+
     }
 
 }

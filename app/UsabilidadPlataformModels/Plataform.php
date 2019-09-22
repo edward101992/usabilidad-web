@@ -38,4 +38,10 @@ class Plataform extends Model
 
     }
 
+    public function plataformaUsuarios(){
+
+        return $this->hasMany('App\UsabilidadPlataformModels\PlataformaUsuario');
+
+    }
+
 }

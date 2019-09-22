@@ -6,5 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class PlataformaUsuario extends Model
 {
-    //
+    public function plataforma (){
+
+    	return $this->belongsTo('App\UsabilidadPlataformModels\Plataform');
+
+    }
 }

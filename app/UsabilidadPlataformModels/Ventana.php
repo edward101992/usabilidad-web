@@ -11,4 +11,10 @@ class Ventana extends Model
     	return $this->belongsTo('App\UsabilidadPlataformModels\Plataform');
 
     }
+
+    public function calificacionVentanas(){
+
+    	return $this->hasMany('App\UsabilidadPlataformModels\CalificacionVentana');
+
+    }
 }

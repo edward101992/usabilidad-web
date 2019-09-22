@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\UsabilidadPlataform;
+namespace App\Http\Controllers\UsabilidadPlataformControllers;
 
-use App\Plataform;
+use App\UsabilidadPlataformModels\Plataform;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Image;

@@ -16,13 +16,13 @@ Route::get('/', function () {
 });
 
 
-Route::get('/home', 'UsabilidadPlataform\HomeController@index')->name('home');
+Route::get('/home', 'UsabilidadPlataformControllers\HomeController@index')->name('home');
 
 /**
  * Rutas Administrador Usuario
  */
 
-Route::group(['namespace'=>'UsabilidadPlataform','prefix'=>'Usabilidad-Web'],function(){
+Route::group(['namespace'=>'UsabilidadPlataformControllers','prefix'=>'Usabilidad-Web'],function(){
 
 	Route::get('ListaUsuarios','UserController@listaUsuario')->name('usuario.lista');
 
@@ -38,35 +38,36 @@ Route::group(['namespace'=>'UsabilidadPlataform','prefix'=>'Usabilidad-Web'],fun
 /**
  * Rutas Administrador Plataforma
  */
+Route::group(['namespace'=>'UsabilidadPlataformControllers'],function(){
 
-Route::get('Usabilidad-Web/AgregarPlataforma','PlataformaController@agregaPlataforma')->name('plataforma.agrega');
+	Route::get('Usabilidad-Web/AgregarPlataforma','PlataformaController@agregaPlataforma')->name('plataforma.agrega');
 
-Route::get('Usabilidad-Web/EditarPlataforma','PlataformaController@editaPlataforma')->name('plataforma.edita');
+	Route::get('Usabilidad-Web/EditarPlataforma','PlataformaController@editaPlataforma')->name('plataforma.edita');
 
-Route::get('Usabilidad-Web/ListaPlataforma','PlataformaController@listaPlataforma')->name('plataforma.lista');
+	Route::get('Usabilidad-Web/ListaPlataforma','PlataformaController@listaPlataforma')->name('plataforma.lista');
 
-Route::get('Usabilidad-Web/Cuestionario','PlataformaController@listaCuestionario')->name('plataforma.cuestionario.ver');
+	Route::get('Usabilidad-Web/Cuestionario','PlataformaController@listaCuestionario')->name('plataforma.cuestionario.ver');
 
-Route::get('Usabilidad-Web/EditarCuestionario','PlataformaController@editaCuestionario')->name('plataforma.cuestionario.edita');
+	Route::get('Usabilidad-Web/EditarCuestionario','PlataformaController@editaCuestionario')->name('plataforma.cuestionario.edita');
 
-Route::get('Usabilidad-Web/AsignarEvaluador','PlataformaController@asignarEvaluador')->name('plataforma.asignarEvaluador');
+	Route::get('Usabilidad-Web/AsignarEvaluador','PlataformaController@asignarEvaluador')->name('plataforma.asignarEvaluador');
 
-Route::get('Usabilidad-Web/Observaciones','PlataformaController@listaObservacion')->name('plataforma.observacion');
+	Route::get('Usabilidad-Web/Observaciones','PlataformaController@listaObservacion')->name('plataforma.observacion');
 
-Route::get('Usabilidad-Web/ReportePlataforma','PlataformaController@reportePlataforma')->name('plataforma.reporte.plataforma');
+	Route::get('Usabilidad-Web/ReportePlataforma','PlataformaController@reportePlataforma')->name('plataforma.reporte.plataforma');
 
-Route::get('Usabilidad-Web/ReporteUsuario','PlataformaController@reporteUsuario')->name('plataforma.reporte.usuario');
+	Route::get('Usabilidad-Web/ReporteUsuario','PlataformaController@reporteUsuario')->name('plataforma.reporte.usuario');
 
-Route::get('Usabilidad-Web/EditarInicio','PlataformaController@editarInicio')->name('plataforma.editar.inicio');
+	Route::get('Usabilidad-Web/EditarInicio','PlataformaController@editarInicio')->name('plataforma.editar.inicio');
 
-Route::post('Usabilidad-Web/InsertarPlataforma','PlataformaController@insertarPlataforma')->name('plataforma.insertar');
+	Route::post('Usabilidad-Web/InsertarPlataforma','PlataformaController@insertarPlataforma')->name('plataforma.insertar');
 
+});
 
 /**
  * Rutas Usuario
  */
 Route::get('Usabilidad-Web/configuracionCuenta','UserController@configuracionCuenta')->name('usuario.configuracionCuenta');
-
 
 Route::get('/Inicio', 'InicioController@inicio');
 

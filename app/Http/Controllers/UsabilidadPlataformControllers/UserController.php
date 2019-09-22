@@ -1,7 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\UsabilidadPlataform;
-
+namespace App\Http\Controllers\UsabilidadPlataformControllers;
 use App\User;
 use App\Role;
 use App\RoleUser;

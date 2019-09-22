@@ -44,4 +44,10 @@ class Plataform extends Model
 
     }
 
+    public function ventanas(){
+
+        return $this->hasMany('App\UsabilidadPlataformModels\Vantana');
+
+    }
+
 }

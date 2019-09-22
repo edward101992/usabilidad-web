@@ -17,4 +17,6 @@ class PlataformaUsuario extends Model
     	return $this->belongsTo('App\User');
 
     }
+
+
 }

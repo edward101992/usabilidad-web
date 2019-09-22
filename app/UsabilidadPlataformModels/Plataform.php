@@ -19,4 +19,9 @@ class Plataform extends Model
         'plataforma_manual',
        
     ];
+
+    public function hipervinculos(){
+        return $this->hasMany('App\UsabilidadPlataformModels\Hipervinculo');
+    }
+
 }

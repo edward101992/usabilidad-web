@@ -32,4 +32,10 @@ class Plataform extends Model
 
     }
 
+    public function tareas(){
+
+        return $this->hasMany('App\UsabilidadPlataformModels\Tarea');
+
+    }
+
 }

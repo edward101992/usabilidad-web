@@ -8,8 +8,8 @@ class Hipervinculo extends Model
 {
     
 	public function Plataform(){
-		
-		$this->belongsTo('App\UsabilidadPlataformModels\Plataform');
+
+		return $this->belongsTo('App\UsabilidadPlataformModels\Plataform');
 	}
 
 }

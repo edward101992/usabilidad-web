@@ -18,5 +18,10 @@ class PlataformaUsuario extends Model
 
     }
 
+    public function promediosEficacia(){
+
+    	return $this->hasMany('App\UsabilidadPlataformModels\PromedioEficacia');
+
+    }
 
 }

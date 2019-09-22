@@ -51,4 +51,11 @@ class User extends Authenticatable
     {
         $this->notify(new ReiniciarPasswordNotification($token));
     }
+
+
+    public function plataformaUsuarios(){
+
+        return $this->hasMany('App\UsabilidadPlataformModels\PlataformaUsuario');
+
+    }
 }

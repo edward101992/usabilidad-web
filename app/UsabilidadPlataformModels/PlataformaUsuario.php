@@ -11,4 +11,10 @@ class PlataformaUsuario extends Model
     	return $this->belongsTo('App\UsabilidadPlataformModels\Plataform');
 
     }
+
+    public function usuario (){
+
+    	return $this->belongsTo('App\User');
+
+    }
 }

@@ -11,4 +11,9 @@ class Tarea extends Model
     	return $this->belongsTo('App\UsabilidadPlataformModels\Plataform');
 
     }
+
+    public function calificacionTareas(){
+
+    	return $this->hasMany('App\UsabilidadPlataformModels\CalificacionTarea');
+    }
 }

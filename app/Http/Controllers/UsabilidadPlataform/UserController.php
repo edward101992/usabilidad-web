@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\UsabilidadPlataform;
 
 use App\User;
 use App\Role;
@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Image;
+use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {

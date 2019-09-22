@@ -16,13 +16,13 @@ Route::get('/', function () {
 });
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'UsabilidadPlataform\HomeController@index')->name('home');
 
 /**
  * Rutas Administrador Usuario
  */
 
-Route::group(['prefix'=>'Usabilidad-Web'],function(){
+Route::group(['namespace'=>'UsabilidadPlataform','prefix'=>'Usabilidad-Web'],function(){
 
 	Route::get('ListaUsuarios','UserController@listaUsuario')->name('usuario.lista');
 

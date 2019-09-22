@@ -1,18 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\UsabilidadPlataform;
 
 use App\Plataform;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Image;
+use App\Http\Controllers\Controller;
 
 class PlataformaController extends Controller
 {
     public function agregaPlataforma(){
 		return view('AdministradorViews.agregarPlataforma');
 	}
-	
+
 	public function insertarPlataforma(){
 		
 		$datos=request()->all();

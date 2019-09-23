@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\UsabilidadPlataformControllers;
+use App\Services\PayUService\Exception;
 use App\User;
 use App\Role;
 use App\RoleUser;
@@ -38,6 +39,7 @@ class UserController extends Controller
 	}
 
 	public function insertarUsuario(){
+
 		$datos = request()->validate([
 			'name'=> 'required',
 			'usuario_apellido'=> 'required',
@@ -47,23 +49,29 @@ class UserController extends Controller
 			'usuario_genero' => '',
 			'usuario_estado' => '',
 			'password'=> 'required|min:6',
-
+			'usuario_imagen' => '',
 		],[
 			'name.required' => 'Campo Nombre Obligatorio',
 
 		]);
 
-
+		// dd(request()->all());
 		$datos = request()->all();
-		$ruta = public_path().'/imagenes/Usuarios/';
-        $imagenOriginal = $datos['usuario_imagen'];
-        $imagen = Image::make($imagenOriginal);
-        //$temp_name = $this->random_string() . '.' . $imagenOriginal->getClientOriginalExtension();
-        $temp_name =  str_random(). '.' .$imagenOriginal->getClientOriginalExtension();
-        $imagen->resize(300,300);
-        $imagen->save($ruta . $temp_name, 100);
+		try { 
+			
+			$ruta = public_path().'/imagenes/Usuarios/';
+	        $imagenOriginal = $datos['usuario_imagen'];
+	        $imagen = Image::make($imagenOriginal);
+	        //$temp_name = $this->random_string() . '.' . $imagenOriginal->getClientOriginalExtension();
+	        $temp_name =  str_random(). '.' .$imagenOriginal->getClientOriginalExtension();
+	        $imagen->resize(300,300);
+	        $imagen->save($ruta . $temp_name, 100);
  
+		} catch (\Exception $e) { 
+			$temp_name = "userDefault.png";
+		}
 		
+	
         $user = User::create([
             'name'=> $datos['name'],
             'usuario_apellido'=> $datos['usuario_apellido'],

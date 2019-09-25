@@ -17,4 +17,6 @@ class Ventana extends Model
     	return $this->hasMany('App\UsabilidadPlataformModels\CalificacionVentana');
 
     }
+
+
 }

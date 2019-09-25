@@ -8,9 +8,15 @@ class PlataformaEstudiante extends Model
 {
     
 
-    public funtion plataforma(){
+    public function plataforma(){
 
     	return $this->belongsTo('App\UsabilidadPlataformModels\Plataform');
+
+    }
+
+    public function usuario(){
+
+    	return $this->belongsTo('App\User');
 
     }
 }

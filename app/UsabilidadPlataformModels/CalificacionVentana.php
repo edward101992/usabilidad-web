@@ -11,4 +11,10 @@ class CalificacionVentana extends Model
     	return $this->belongsTo('App\UsabilidadPlataformModels\Ventana');
 
     }
+
+    public function plataformaEvaluador(){
+
+    	return $this->belongsTo('App\UsabilidadPlataformModels\PlataformaEvaluador');
+
+    }
 }

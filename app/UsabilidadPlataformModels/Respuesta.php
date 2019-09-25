@@ -9,5 +9,11 @@ class Respuesta extends Model
     public function pregunta(){
 
     	return $this->belongsTo('App\UsabilidadPlataformModels\Pregunta');
+    
+    }
+
+    public function plataformaEvaluador(){
+
+    	return $this->belongsTo('App\UsabilidadPlataformModels\PlataformaEvaluador');
     }
 }

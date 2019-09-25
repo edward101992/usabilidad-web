@@ -58,5 +58,12 @@ class User extends Authenticatable
         return $this->hasMany('App\UsabilidadPlataformModels\PlataformaEvaluador');
 
     }
+
+
+    public function plataformaEstudiantes(){
+
+        return $this->hasMany('App\UsabilidadPlataformModels\PlataformaEstudiante');
+
+    }
     
 }

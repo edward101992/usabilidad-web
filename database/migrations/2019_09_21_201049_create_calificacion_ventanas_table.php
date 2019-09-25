@@ -17,9 +17,9 @@ class CreateCalificacionVentanasTable extends Migration
             $table->increments('id');
             $table->float('calificacion_tiempo_carga');
             $table->integer('ventana_id')->unsigned();
-            $table->integer('plataforma_usuario_id')->unsigned();
+            $table->integer('plataforma_evaluador_id')->unsigned();
             $table->foreign('ventana_id')->references('id')->on('ventanas');
-            $table->foreign('plataforma_usuario_id')->references('id')->on('plataforma_usuarios');
+            $table->foreign('plataforma_evaluador_id')->references('id')->on('plataforma_evaluador');
             $table->timestamps();
         });
     }

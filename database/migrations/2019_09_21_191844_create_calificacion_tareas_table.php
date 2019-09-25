@@ -18,9 +18,9 @@ class CreateCalificacionTareasTable extends Migration
             $table->integer('pasos_evaluador');
             $table->date('tiempo_evaluador');
             $table->integer('tarea_id')->unsigned();
-            $table->integer('plataforma_usuario_id')->unsigned();
+            $table->integer('plataforma_evaluador_id')->unsigned();
             $table->foreign('tarea_id')->references('id')->on('tareas');
-            $table->foreign('plataforma_usuario_id')->references('id')->on('plataforma_usuarios');
+            $table->foreign('plataforma_evaluador_id')->references('id')->on('plataforma_evaluador');
             $table->timestamps();
         });
     }

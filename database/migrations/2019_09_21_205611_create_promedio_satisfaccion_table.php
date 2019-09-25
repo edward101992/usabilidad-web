@@ -25,8 +25,8 @@ class CreatePromedioSatisfaccionTable extends Migration
             $table->string('item_8_legibilidad');
             $table->string('item_9_navegabilidad');
             $table->string('suma_item_satisfaccion');
-            $table->integer('plataforma_usuario_id')->unsigned();
-            $table->foreign('plataforma_usuario_id')->references('id')->on('plataforma_usuarios');
+            $table->integer('plataforma_evaluador_id')->unsigned();
+            $table->foreign('plataforma_evaluador_id')->references('id')->on('plataforma_evaluador');
             $table->timestamps();
         });
     }

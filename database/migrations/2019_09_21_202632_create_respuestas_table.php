@@ -17,9 +17,9 @@ class CreateRespuestasTable extends Migration
             $table->increments('id');
             $table->string('respuesta_descripcion');
             $table->integer('preguntas_id')->unsigned();
-            $table->integer('plataforma_usuario_id')->unsigned();
+            $table->integer('plataforma_evaluador_id')->unsigned();
             $table->foreign('preguntas_id')->references('id')->on('preguntas');
-            $table->foreign('plataforma_usuario_id')->references('id')->on('plataforma_usuarios');
+            $table->foreign('plataforma_evaluador_id')->references('id')->on('plataforma_evaluador');
             $table->timestamps();
         });
     }

@@ -23,8 +23,8 @@ class CreatePromedioEficienciaTable extends Migration
             $table->string('item_4_carga_memoria_minima');
             $table->string('item_5_procesos_funcionamiento');
             $table->string('suma_item_eficiencia');
-            $table->integer('plataforma_usuario_id')->unsigned();
-            $table->foreign('plataforma_usuario_id')->references('id')->on('plataforma_usuarios');
+            $table->integer('plataforma_evaluador_id')->unsigned();
+            $table->foreign('plataforma_evaluador_id')->references('id')->on('plataforma_evaluador');
             $table->timestamps();
         });
     }

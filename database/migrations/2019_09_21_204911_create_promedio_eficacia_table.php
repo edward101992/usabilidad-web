@@ -19,8 +19,8 @@ class CreatePromedioEficaciaTable extends Migration
             $table->date('item_2_tiempo_tarea');
             $table->string('item_3_tareas_complicadas');
             $table->string('suma_item_eficacia');
-            $table->integer('plataforma_usuario_id')->unsigned();
-            $table->foreign('plataforma_usuario_id')->references('id')->on('plataforma_usuarios');
+            $table->integer('plataforma_evaluador_id')->unsigned();
+            $table->foreign('plataforma_evaluador_id')->references('id')->on('plataforma_evaluador');
             $table->timestamps();
         });
     }

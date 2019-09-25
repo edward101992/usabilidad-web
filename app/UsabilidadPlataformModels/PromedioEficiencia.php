@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class PromedioEficiencia extends Model
 {
-	/**
-    public function plataformaUsuario(){
+	
+    public function plataformaEvaluador(){
 
-    	return $this->belongsTo('App\UsabilidadPlataformModels\PlataformaUsuario');
+    	return $this->belongsTo('App\UsabilidadPlataformModels\PlataformaEvaluador');
 
     }
-    */
+    
 }

@@ -38,13 +38,20 @@ class Plataform extends Model
 
     }
 
-/**
-    public function plataformaUsuarios(){
 
-        return $this->hasMany('App\UsabilidadPlataformModels\PlataformaUsuario');
+    public function plataformaEvaluadores(){
+
+        return $this->hasMany('App\UsabilidadPlataformModels\PlataformaEvaluador');
 
     }
-*/
+
+
+    public function plataformaEstudiantes(){
+
+        return $this->hasMany('App\UsabilidadPlataformModels\PlataformaEstudiante');
+
+    }
+
     public function ventanas(){
 
         return $this->hasMany('App\UsabilidadPlataformModels\Vantana');

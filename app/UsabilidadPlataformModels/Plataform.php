@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Plataform extends Model
 {
 	use Notifiable;
-
+/**
       protected $fillable = [
         'plataforma_nombre', 
         'plataforma_fecha_creacion',
@@ -19,7 +19,8 @@ class Plataform extends Model
         'plataforma_manual',
        
     ];
-
+*/
+    protected $table = 'plataforms';
     public function hipervinculos(){
        
         return $this->hasMany('App\UsabilidadPlataformModels\Hipervinculo');

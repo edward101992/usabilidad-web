@@ -66,4 +66,9 @@ class User extends Authenticatable
 
     }
     
+    public function genero(){
+
+        return $this->belongsTo('App\UsabilidadPlataformModels\Genero');
+
+    }
 }

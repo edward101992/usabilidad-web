@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class PlataformaEvaluador extends Model
 {
     
-
+    protected $table = 'plataforma_evaluador';
+    
     public function plataforma(){
     	
     	return $this->belongsTo('App\UsabilidadPlataformModels\Plataform');

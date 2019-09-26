@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Plataform;
+use App\UsabilidadPlataformModels\Plataform;
 
 class PlataformaSeeder extends Seeder
 {
@@ -12,6 +12,10 @@ class PlataformaSeeder extends Seeder
      */
     public function run()
     {
+
+        // DB::table('plataforms')->truncate();
+
+
          $plataforma= Plataform::create([
         	'plataforma_nombre'=>'Usabilidad-Web',
             'plataforma_manual'=>'manual.pdf',
@@ -24,9 +28,7 @@ class PlataformaSeeder extends Seeder
             'plataforma_promedio_eficacia'=>3.00,
             'plataforma_total_usabilidad'=>12.00,
             'plataforma_estado'=>true,        	
-        	'plataforma_url'=>'www.Usabilidad-Web.com'
-        	
+        	'plataforma_url'=>'www.Usabilidad-Web.com'       	
         ]);
     }
 }
-

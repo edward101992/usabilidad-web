@@ -32,6 +32,9 @@ class DatabaseSeeder extends Seeder
             'ventanas',
             'encuestas',
             'preguntas',
+            'plataforma_estudiante',
+            'generos',
+            'calificacion_tareas',
 
 
         ]);
@@ -46,7 +49,11 @@ class DatabaseSeeder extends Seeder
         $this->call(VentanaSeeder::class);
         $this->call(EncuestaSeeder::class);
         $this->call(PreguntaSeeder::class);
-      //$this->call(PlataformaEvaluadorSeeder::class);
+        $this->call(GeneroSeeder::class);
+        $this->call(PlataformaEstudianteSeeder::class);
+        $this->call(PlataformaEvaluadorSeeder::class);
+        $this->call(CalificacionTareaSeeder::class);
+
          
 
     }

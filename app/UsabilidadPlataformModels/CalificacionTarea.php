@@ -13,7 +13,7 @@ class CalificacionTarea extends Model
     	return $this->belongsTo('App\UsabilidadPlataformModels\Tarea');
     }
 
-    publuc function plataformaEvaluador(){
+    public function plataformaEvaluador(){
 
     	return $this->belongsTo('App\UsabilidadPlataformModels\PlataformaEvaluador');
 

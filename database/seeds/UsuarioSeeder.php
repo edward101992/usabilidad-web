@@ -98,6 +98,20 @@ class UsuarioSeeder extends Seeder
             'usuario_estado'=>true
         ]);
         $usuario->attachRole($evaluador);
+
+
+        $usuario=  User::create([
+            'password'=>bcrypt('123'),
+            'name'=>'Miguel',
+            'usuario_apellido'=>'Pote',
+            'usuario_documento'=>'102222222',
+            'usuario_telefono'=>'3125720193',
+            'email'=>'edwardconw7@gmail.com',
+            'usuario_imagen'=>'userDefault.png',
+            'usuario_genero'=>'2',
+            'usuario_estado'=>true
+        ]);
+        $usuario->attachRole($estudiante);
     }
 }
 

@@ -14,7 +14,7 @@ class PlataformaEvaluadorSeeder extends Seeder
     {
         $plataformaevaluador = PlataformaEvaluador::create([
         	'suma_usabilidad' => 17.46,
-        	'pltaforma_id' => 1,
+        	'plataforma_id' => 1,
         	'usuario_id' => 2
 
         ]);

@@ -84,6 +84,20 @@ class UsuarioSeeder extends Seeder
             'usuario_estado'=>false
         ]);
          $usuario->attachRole($admin);
+
+
+         $usuario=  User::create([
+            'password'=>bcrypt('123'),
+            'name'=>'Pedro',
+            'usuario_apellido'=>'Diamante',
+            'usuario_documento'=>'100099999',
+            'usuario_telefono'=>'3125720193',
+            'email'=>'edwardconw6@gmail.com',
+            'usuario_imagen'=>'userDefault.png',
+            'usuario_genero'=>'2',
+            'usuario_estado'=>true
+        ]);
+        $usuario->attachRole($evaluador);
     }
 }
 

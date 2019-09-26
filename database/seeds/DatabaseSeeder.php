@@ -28,6 +28,8 @@ class DatabaseSeeder extends Seeder
             'role_user',
             'observaciones',
             'tareas',
+            'plataforma_evaluador',
+
 
         ]);
 
@@ -38,6 +40,7 @@ class DatabaseSeeder extends Seeder
         $this->call(HipervinculoSeeder::class);
         $this->call(ObservacionSeeder::class);
         $this->call(TareaSeeder::class);
+      //$this->call(PlataformaEvaluadorSeeder::class);
          
 
     }

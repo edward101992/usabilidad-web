@@ -29,6 +29,8 @@ class DatabaseSeeder extends Seeder
             'observaciones',
             'tareas',
             'plataforma_evaluador',
+            'ventanas',
+            'encuestas',
 
 
         ]);
@@ -40,6 +42,8 @@ class DatabaseSeeder extends Seeder
         $this->call(HipervinculoSeeder::class);
         $this->call(ObservacionSeeder::class);
         $this->call(TareaSeeder::class);
+        $this->call(VentanaSeeder::class);
+        $this->call(EncuestaSeeder::class);
       //$this->call(PlataformaEvaluadorSeeder::class);
          
 

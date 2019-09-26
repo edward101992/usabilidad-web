@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ventana extends Model
 {
+	protected $table = 'ventanas';
     public function plataforma(){
 
     	return $this->belongsTo('App\UsabilidadPlataformModels\Plataform');

@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use App\User;
-use App\Role;
+use App\UsabilidadPlataformModels\Role;
 
 class UsuarioSeeder extends Seeder
 {

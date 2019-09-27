@@ -9,8 +9,10 @@ class Genero extends Model
     protected $table = 'generos';
     public function usuarios(){
 
-    	return $this->hasMany('App\User');
+    	return $this->hasMany('App\UsabilidadPlataformModels\User');
 
     }
 
 }
+
+

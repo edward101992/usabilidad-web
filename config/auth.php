@@ -67,8 +67,9 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\UsabilidadPlataformModels\User::class,
         ],
+
 
         // 'users' => [
         //     'driver' => 'database',
@@ -102,7 +103,7 @@ return [
     'providers' => [
         'users' => [
         'driver' => 'eloquent',
-        'model' => App\User::class,
+        'model' => App\UsabilidadPlataformModels\User::class,
         'table' => 'users',
     ],
 ],

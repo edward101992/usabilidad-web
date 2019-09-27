@@ -17,7 +17,7 @@ class PlataformaEvaluador extends Model
 
     public function usuario(){
 
-    	return $this->belongsTo('App\User');
+    	return $this->belongsTo('App\UsabilidadPlataformModels\User');
 
     }
 

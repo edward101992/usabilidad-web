@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\UsabilidadPlataformControllers;
 use App\Services\PayUService\Exception;
-use App\User;
+use App\UsabilidadPlataformModels\User;
 use App\UsabilidadPlataformModels\Role;
 use App\UsabilidadPlataformModels\RoleUser;
 use Illuminate\Support\Facades\DB;

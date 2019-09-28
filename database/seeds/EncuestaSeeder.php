@@ -14,21 +14,46 @@ class EncuestaSeeder extends Seeder
     {
     	$encuesta = Encuesta::create([
 
-    		'encuesta_nombre' => 'Encuesta de Satisfaccion'
+    		'encuesta_nombre' => 'Encuesta Accesibilidad de la Informacion'
 
     	]);
 
     	$encuesta = Encuesta::create([
 
-    		'encuesta_nombre' => 'Encuesta de Eficacia'
+    		'encuesta_nombre' => 'Encuesta Atractibilidad'
 
     	]);
 
     	$encuesta = Encuesta::create([
 
-    		'encuesta_nombre' => 'Encuesta de Eficiencia'
+    		'encuesta_nombre' => 'Encuesta Simplicidad'
 
     	]);
+
+        $encuesta = Encuesta::create([
+
+            'encuesta_nombre' => 'Encuesta Consistencia'
+
+        ]);
+
+
+        $encuesta = Encuesta::create([
+
+            'encuesta_nombre' => 'Encuesta Uniformidad'
+
+        ]);
+
+        $encuesta = Encuesta::create([
+
+            'encuesta_nombre' => 'Encuesta Legibilidad'
+
+        ]);
+
+        $encuesta = Encuesta::create([
+
+            'encuesta_nombre' => 'Encuesta Navigabilidad'
+
+        ]);
 
     }
 }
